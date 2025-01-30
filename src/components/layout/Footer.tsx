@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p>&copy; {new Date().getFullYear()} Finunique Small Pvt Ltd All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} DigihubUnique Tech Solutions Pvt. Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>
