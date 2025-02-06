@@ -13,7 +13,7 @@ export default function Footer() {
             <img src={img1} alt="" style={{width:"50%"}} />
               
             </Link>
-            <p className="mb-4">Your one-stop shop for all things tech</p>
+            <p className="mb-4">Your one-stop shop for all things technology</p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-white"><Facebook className="h-5 w-5" /></a>
               <a href="#" className="hover:text-white"><Twitter className="h-5 w-5" /></a>
