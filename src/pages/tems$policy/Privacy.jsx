@@ -7,7 +7,7 @@ const Privacy = () => {
       <section className="breadcrumb__area include-bg pt-60 pb-60 mb-50 text-start" style={{ backgroundColor: '#f5f5f5' }}>
         <div className="container">
           <div className="breadcrumb__content p-relative z-index-1">
-            <h3 className="breadcrumb__title">Privacy Policyy</h3>
+            <h3 className="breadcrumb__title">Privacy Policy</h3>
             <div className="breadcrumb__list js_breadcrumb_reduce_length_on_mobile">
               <span>
                 <a href="index.html">Home</a>
@@ -22,7 +22,7 @@ const Privacy = () => {
       <section className="tp-page-area pb-80 pt-50">
         <div className="container">
           <div className="ck-content">
-            <h3 className="section-heading"><strong>Privacy Policy for DigihubUnique Tech Solutions Pvt. Ltd. Pvt Ltd</strong></h3>
+            <h3 className="section-heading"><strong>Privacy Policy for Digihub Unique Tech Solutions Private Limited Pvt Ltd</strong></h3>
             <p>Last updated: Feb, 20, 2024</p>
 
             <h3 className="section-heading"><strong>Introduction</strong></h3>
