@@ -1,19 +1,22 @@
 import React from "react";
 import { ChevronRight } from "lucide-react"; // Importing the icon from Lucide
 
-const Shipping = () => {
+const Refund = () => {
   return (
     <main>
-      <section className="breadcrumb__area include-bg pt-60 pb-60 mb-50 text-start" style={{ backgroundColor: '#f5f5f5' }}>
+      <section
+        className="breadcrumb__area include-bg pt-60 pb-60 mb-50 text-start"
+        style={{ backgroundColor: "#f5f5f5" }}
+      >
         <div className="container">
           <div className="breadcrumb__content p-relative z-index-1">
-            <h3 className="breadcrumb__title">Shipping Policy</h3>
+            <h3 className="breadcrumb__title">Refund Policy</h3>
             <div className="breadcrumb__list js_breadcrumb_reduce_length_on_mobile">
               <span>
                 <a href="index.html">Home</a>
               </span>
               <ChevronRight className="breadcrumb-icon" />
-              <span>Shipping Policy</span>
+              <span>Refund Policy</span>
             </div>
           </div>
         </div>
@@ -23,88 +26,94 @@ const Shipping = () => {
         <div className="container">
           <div className="ck-content">
             <h3 className="section-heading">
-              <strong>DigihubUnique Tech Solutions Pvt. Ltd. CENTERS - Service Terms &amp; Conditions</strong>
+              <strong>Return And Refund Policy</strong>
             </h3>
-            <h3 className="section-heading">
-              <strong>Introduction</strong>
-            </h3>
-            <p>
-              Welcome to Finunique Small Pvt Ltd Services (hereinafter referred to as "DigihubUnique Tech Solutions Pvt. Ltd. Pvt Ltd"). By signing the Service Form (hereinafter referred to as the "Form") and handing over your product(s) for service, you agree to abide by these Terms and Conditions. These terms govern the service and repair of your product(s) by Digital Services Centers through its after-sales service, operated by an independent third party. If you do not agree to these terms and conditions, please do not submit the Form or hand over your product(s) for service.
-            </p>
 
             <h3 className="section-heading">
-              <strong>Definitions</strong>
-            </h3>
-            <p>
-              <b><strong>You/Customer:</strong></b> Refers to the individual or entity handing over the product(s) for service.
-            </p>
-            <p>
-              <b><strong>We/Us/Company:</strong></b> Refers to Digital Services Centers.
-            </p>
-
-            <h3 className="section-heading">
-              <strong>In-Warranty Product Service</strong>
+              <strong>Return Policy</strong>
             </h3>
             <ul className="terms-list">
-              <li><b><strong>Proof of Purchase:</strong></b> You must provide a clear and legible copy of the proof of purchase (such as a bill or invoice) and details of the product’s model and serial number.</li>
-              <li><b><strong>Customer Responsibility:</strong></b> It is your sole responsibility to support the Company/service provider in offering its services.</li>
-              <li><b><strong>Warranty Terms:</strong></b> The service of the product(s) is governed by the terms of the warranty conditions. Please refer to the warranty terms on our website for detailed inclusions and exclusions.</li>
-              <li><b><strong>Warranty Expiration:</strong></b> The product warranty will expire as specified in the warranty terms. In the event of repair or replacement of any part, the warranty will continue only for the unexpired period of the main product’s warranty.</li>
-              <li><b><strong>Free Service:</strong></b> Products covered under warranty will receive free service and replacement of components, provided the product is used as per the user manual instructions.</li>
-              <li><b><strong>Property Rights:</strong></b> Replaced products or parts under warranty will become your property, and removed parts will become the property of the Company.</li>
-              <li><b><strong>Service Charges:</strong></b> Charges will apply for products under warranty if the product is not used as per the user manual instructions.</li>
-              <li><b><strong>External Accessories:</strong></b> The warranty does not cover repair, installation, or configuration of external accessories supplied by Digital Services Centers or third parties.</li>
-              <li><b><strong>Replacement Products:</strong></b> In case of a free replacement, the same model will be provided. If discontinued, an alternate model will be provided with your consent.<br />
-                <strong>Shipping Policy:</strong> Packages are generally dispatched within 6-7 days after receipt of payment and are shipped via reputed national couriers with tracking. We will provide you with a link to track your package online.</li>
+              <li>
+                All Products purchased from the Website enjoy Ten (10) days
+                Return Policy.
+              </li>
+              <li>
+                Any Product purchased from the Website can be returned to the
+                Company within Ten (10) days of delivery by placing a Cancel
+                Order request by logging a call with the Company’s Customer Care
+                Centre at 9660339514 (Mon to Sat-10AM to 6PM)
+              </li>
+              <li>
+                Any Product purchased from the Website can be returned only if
+                the Product is damaged, defective, or different from what was
+                ordered.
+              </li>
+              <li>
+                The User shall ensure not to accept delivery of any Product
+                whose original packaging is damaged or tampered in any manner.
+              </li>
+              <li>
+                If the Product is damaged/defective/different from what was
+                ordered, the User must immediately inform the Company’s Customer
+                Care Centre, and the Company will arrange for replacement or a
+                refund of the price, including shipping charges if applicable.
+              </li>
+              <li>
+                In case of Cancellation (Return/Exchange) after delivery, the
+                Customer must cooperate fully to return the Product with all
+                original packaging, manuals, accessories, freebies, and other
+                materials received with the Product. Refund or exchange will
+                only be processed after receipt of the product.
+              </li>
             </ul>
 
+            <p className="section-text">
+              All free gifts, in original packing and unused condition, must be
+              returned along with the Product in case of cancellation of the
+              Product with which the free gift(s) were given.
+            </p>
+
             <h3 className="section-heading">
-              <strong>Out-of-Warranty Product Service</strong>
+              <strong>Refund Policy</strong>
             </h3>
             <ul className="terms-list">
-              <li><b><strong>Service Charges:</strong></b> For products outside the warranty period, a service charge of Rs. 450 + GST or more (subject to prevailing charges) and replacement part charges will apply.</li>
-              <li><b><strong>Cost Estimate:</strong></b> Service charges and part costs will be estimated after product inspection. If you reject the estimate after product inspection, inspection charges will apply, and your product will be returned without repair.</li>
-              <li><b><strong>Service Types:</strong></b> Carry-In, Workshop, or Onsite Home repair work will be conducted based on accepted estimates.</li>
-              <li><b><strong>Repeat Complaints:</strong></b> No service charges will apply if the same complaint recurs within 30 days of the last service.</li>
-              <li><b><strong>GST:</strong></b> All services attract a GST of 18%.</li>
-              <li><b><strong>Onsite Service:</strong></b> Onsite/In-Home service is available for specific products. Contact Customer Care for more details.</li>
-              <li><b><strong>Damage Exclusions:</strong></b> Damage or failure due to unauthorized modifications, improper use, or removal of identification labels will be treated as outside warranty, and out-of-warranty charges will apply.</li>
-              <li><b><strong>Modification Prohibition:</strong></b> Any modification to the product is strictly prohibited. The Company will not be liable for any accidents or damages resulting from modifications.</li>
+              <li>
+                If approved, you’ll be automatically refunded on your original
+                payment method within 10 business days.
+              </li>
+              <li>
+                Any cancellation/exchange in accordance with the above terms
+                qualifies for payment reversal or replacement of the Product
+                depending on availability and User preference.
+              </li>
+              <li>
+                Refunds for cancellations before delivery will be subject to a
+                2% deduction plus applicable taxes of the Product Price
+                (Transaction value) as banking and transaction charges. The
+                balance amount will be processed for refund.
+              </li>
+              <li>
+                Refunds will be initiated within Ten (10) working days of
+                receipt of the Request for Cancellation or after the Company’s
+                logistics partner picks up the Product from the User’s place.
+                The refund will be credited to the User’s bank/credit card
+                account based on banking channels’ processing time.
+              </li>
+              <li>
+                Refunds will be credited to the account from which payment was
+                made.
+              </li>
+              <li>
+                Interest Fee Reversal: If an EMI facility was availed for the
+                cancelled transaction, the interest fee debited to the User’s
+                card will be reversed as per the bank’s terms. The User should
+                contact the card-issuing bank for interest refund procedures.
+              </li>
             </ul>
 
-            <h3 className="section-heading">
-              <strong>Force Majeure</strong>
-            </h3>
-            <p>
-              In unforeseen situations like acts of God, epidemics, pandemics, strikes, or lockouts, the Company’s services will be suspended. Once normalcy is restored, services will resume.
-            </p>
-
-            <h3 className="section-heading">
-              <strong>Liability</strong>
-            </h3>
-            <p>
-              The Company/Service provider and its employees are not liable for any special, indirect, incidental, or consequential damages from repair services. The sole liability is limited to the cost of repair or replacement of the affected product.
-            </p>
-
-            <h3 className="section-heading">
-              <strong>Abandoned Products</strong>
-            </h3>
-            <p>
-              If the Company/Service provider is unable to return the product due to lack of payment or refusal to collect within thirty (30) days of notification, the product will be considered abandoned. The Company may dispose of the product in accordance with applicable laws.
-            </p>
-
-            <h3 className="section-heading">
-              <strong>Data Collection</strong>
-            </h3>
-            <p>
-              You agree that it is necessary for the Company to collect, process, and use your personal data to perform service and support obligations under these terms and conditions.
-            </p>
-
-            <h3 className="section-heading">
-              <strong>Contact Information</strong>
-            </h3>
-            <p>
-              For further details, please contact our Customer Care or visit our website.
+            <p className="section-text">
+              The above terms and conditions in respect to refunds are referred
+              to as the "Refund Policy."
             </p>
           </div>
         </div>
@@ -133,7 +142,7 @@ const Shipping = () => {
 
         .section-heading {
           background-color: #f2f2f2;
-          font-family: 'PT Sans', sans-serif;
+          font-family: "PT Sans", sans-serif;
           font-size: 21px;
           font-weight: bold;
           padding: 10px 0;
@@ -147,10 +156,19 @@ const Shipping = () => {
         }
 
         .terms-list li {
-          font-family: 'PT Sans', sans-serif;
+          font-family: "PT Sans", sans-serif;
           font-size: 14px;
           line-height: 1.6;
           margin-bottom: 10px;
+        }
+
+        .section-text {
+          font-family: "PT Sans", sans-serif;
+          font-size: 14px;
+          line-height: 1.4;
+          margin-top: 0;
+          margin-bottom: 10px;
+          color: #777;
         }
 
         .container {
@@ -162,4 +180,4 @@ const Shipping = () => {
   );
 };
 
-export default Shipping;
+export default Refund;

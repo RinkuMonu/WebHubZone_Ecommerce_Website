@@ -22,7 +22,7 @@ const Cookies = () => {
       <section className="tp-page-area pb-80 pt-50">
         <div className="container">
           <div className="ck-content">
-            <h1 className="section-heading"><strong>Cookie Policy for DigihubUnique Tech Solutions Pvt. Ltd. Pvt Ltd</strong></h1>
+            <h1 className="section-heading"><strong>Cookie Policy for Digihub Unique Tech Solutions Private Limited Pvt Ltd</strong></h1>
             <p>Last updated: Feb, 20, 2024</p>
 
             <h3 className="section-heading"><strong>What Are Cookies</strong></h3>
