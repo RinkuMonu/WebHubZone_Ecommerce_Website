@@ -77,10 +77,7 @@ const Refund = () => {
               <strong>Refund Policy</strong>
             </h3>
             <ul className="terms-list">
-              <li>
-                If approved, you’ll be automatically refunded on your original
-                payment method within 10 business days.
-              </li>
+
               <li>
                 Any cancellation/exchange in accordance with the above terms
                 qualifies for payment reversal or replacement of the Product
@@ -98,6 +95,9 @@ const Refund = () => {
                 logistics partner picks up the Product from the User’s place.
                 The refund will be credited to the User’s bank/credit card
                 account based on banking channels’ processing time.
+                If approved, you’ll be automatically refunded on your original
+                payment method within 10 business days.
+
               </li>
               <li>
                 Refunds will be credited to the account from which payment was
