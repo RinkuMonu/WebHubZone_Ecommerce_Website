@@ -46,7 +46,7 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick, cartItemCount }) => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("storage", loadUser);
     };
-  }, []);
+  }, [localStorage]);
 
   const handleLogout = () => {
     localStorage.removeItem("userData");
@@ -141,25 +141,25 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick, cartItemCount }) => {
                       </span>
                     </Link>
                     {user && (
-    <div className="absolute hidden group-hover:block bg-white shadow-md rounded-lg  p-2 z-10">
-      <ul className="text-gray-700">
-        <li className="py-1 px-3 hover:bg-gray-100 rounded-md cursor-pointer">
-          Your Orders
-        </li>
-        <li className="py-1 px-3 hover:bg-gray-100 rounded-md cursor-pointer">
-          Profile
-        </li>
-        <li className="py-1 px-3 hover:bg-gray-100 rounded-md cursor-pointer">
-          <button
-            onClick={handleLogout}
-            className="hover:text-red-600 text-left w-full"
-          >
-            Logout
-          </button>
-        </li>
-      </ul>
-    </div>
-  )}
+                      <div className="absolute hidden group-hover:block bg-white shadow-md rounded-lg  p-2 z-10">
+                        <ul className="text-gray-700">
+                          <li className="py-1 px-3 hover:bg-gray-100 rounded-md cursor-pointer">
+                            Your Orders
+                          </li>
+                          <li className="py-1 px-3 hover:bg-gray-100 rounded-md cursor-pointer">
+                            Profile
+                          </li>
+                          <li className="py-1 px-3 hover:bg-gray-100 rounded-md cursor-pointer">
+                            <button
+                              onClick={handleLogout}
+                              className="hover:text-red-600 text-left w-full"
+                            >
+                              Logout
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
                   </div>
                   {/* Wishlist and Cart */}
                   <div className="flex items-center sm:gap-6">

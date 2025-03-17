@@ -3,6 +3,8 @@ import { State, City } from "country-state-city";
 import { ChevronLeft, Wallet, Check } from "lucide-react";
 import logo from "../assest/4.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 interface Address {
   id: string;
   name: string;
@@ -48,16 +50,16 @@ const addresses: Address[] = [
   },
 ];
 
-const orderItems: OrderItem[] = [
-  {
-    id: "1",
-    name: "Lenovo Tab M11",
-    price: 14999,
-    quantity: 1,
-    image:
-      "https://images.unsplash.com/photo-1542751110-97427bbecf20?w=300&q=80",
-  },
-];
+// const orderItems: OrderItem[] = [
+//   {
+//     id: "1",
+//     name: "Lenovo Tab M11",
+//     price: 14999,
+//     quantity: 1,
+//     image:
+//       "https://images.unsplash.com/photo-1542751110-97427bbecf20?w=300&q=80",
+//   },
+// ];
 
 const shippingMethods: ShippingMethod[] = [
   { id: "1", name: "Free Delivery", description: "Free shipping", price: 0 },
@@ -81,13 +83,15 @@ const coupons: CouponCode[] = [
 
 function AddressShiping({ cartItems }) {
   const [isNewAddress, setIsNewAddress] = useState(false); // State for new address form visibility
+  const [isloading, setIsLoading] = useState(false)
 
-  const handleAddressChange = (e) => {
+  const handleAddressChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value;
-    setSelectedAddress(value);
     setIsNewAddress(value === "new");
+    setSelectedAddress(value);
   };
-  const [selectedAddress, setSelectedAddress] = useState<string>("new");
+
+  const [selectedAddress, setSelectedAddress] = useState<string>("");
   const [selectedShipping, setSelectedShipping] = useState<string>("1");
   const [selectedPayment, setSelectedPayment] = useState<string>("phonepe");
   const [showCouponInput, setShowCouponInput] = useState(false);
@@ -104,11 +108,58 @@ function AddressShiping({ cartItems }) {
   const cities = selectedState
     ? City.getCitiesOfState("IN", selectedState.isoCode)
     : [];
- 
+
+  const [userdata, setUserData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    state: "",
+    city: "",
+    address: ""
+
+  })
+
 
   const shipping =
     shippingMethods.find((m) => m.id === selectedShipping)?.price || 0;
   const total = subtotal + shipping;
+
+  const data = {
+    name: userdata.name,
+    amount: total,
+    number: userdata.phone,
+    MUID: "MUID" + Date.now(),
+    transactionId: 'T' + Date.now(),
+  }
+  const handlePayment = (e) => {
+    e.preventDefault();
+    setIsLoading(true)
+    axios
+      .post('https://digihub-backend.onrender.com/payment/add', { ...data })
+      .then((res) => {
+        // Log the response for debugging
+        console.log("Payment Responseeee:", res.data);
+
+        // Check if redirectUrl is present in the response
+        if (res.data) {
+          const redirectUrl = res.data;
+
+          // Redirect the user to PhonePe payment page
+          window.location.href = redirectUrl;
+        } else {
+          console.error("Redirect URL missing in the response");
+        }
+      })
+      .catch((error) => {
+        console.error("Payment Error:", error);
+      });
+    
+  }; 
+
+  const handleonChange = (e) => {
+    const { name, value } = e.target;
+    setUserData({ ...userdata, [name]: value });
+  };
 
   return (
     <div className=" min-h-screen bg-gray-50">
@@ -137,12 +188,13 @@ function AddressShiping({ cartItems }) {
                       value={selectedAddress}
                       onChange={handleAddressChange}
                     >
+                      <option value="">Select Address</option>
                       <option value="new">Add new address...</option>
-                      {addresses.map((addr) => (
+                      {/* {addresses.map((addr) => (
                         <option key={addr.id} value={addr.id}>
                           {addr.address}, {addr.city}, {addr.state}
                         </option>
-                      ))}
+                      ))} */}
                     </select>
                   </div>
 
@@ -152,13 +204,20 @@ function AddressShiping({ cartItems }) {
                       <div className="relative">
                         <input
                           type="text"
-                          id="full_name"
+                          id="name"
+                          name="name"
                           className="block px-2.5 py-3 w-full text-sm rounded-lg border border-green-600 focus:outline-green-600"
-                          placeholder=" "
+                          value={userdata.name}
+                          onChange={handleonChange}
+                          placeholder="Enter your name"
+                          required 
+                          minLength={5} 
+                          maxLength={50} 
+                         
                         />
                         <Check className="text-green-600 absolute top-2 right-2" />
                         <label
-                          htmlFor="full_name"
+                          htmlFor="name"
                           className="absolute px-2 text-base text-gray-700 duration-300 transform -translate-y-4 scale-75 top-1 z-10 origin-[0] bg-white start-3"
                         >
                           Full Name
@@ -172,6 +231,12 @@ function AddressShiping({ cartItems }) {
                             id="email"
                             className="block px-2.5 py-3 w-full text-sm rounded-lg border border-green-600 focus:outline-green-600"
                             placeholder=" "
+                            name="email"
+                            value={userdata.email}
+                            onChange={handleonChange}
+                            required 
+                            minLength={5} 
+                            maxLength={50} 
                           />
                           <Check className="text-green-600 absolute top-2 right-2" />
                           <label
@@ -183,10 +248,16 @@ function AddressShiping({ cartItems }) {
                         </div>
                         <div className="relative">
                           <input
-                            type="text"
+                            type="number"
                             id="phone"
                             className="block px-2.5 py-3 w-full text-sm rounded-lg border border-green-600 focus:outline-green-600"
                             placeholder=" "
+                             name="phone"
+                            value={userdata.phone}
+                            onChange={handleonChange}
+                            required 
+                            minLength={10} 
+                            maxLength={11} 
                           />
                           <Check className="text-green-600 absolute top-2 right-2" />
                           <label
@@ -398,10 +469,23 @@ function AddressShiping({ cartItems }) {
                 >
                   <ChevronLeft className="w-5 h-5" />
                   Back to Cart
-                </Link>
-                <button className=" bg-[#434389] text-white py-3 px-4 rounded-lg hover:bg-[#5252a2] font-medium">
-                  Place Order
-                </button>
+                </Link>{total === 0 ? "Your Cart Is Empty  Please Add Something"  :
+                <button
+                  className="bg-[#434389] text-white py-3 px-4 rounded-lg hover:bg-[#5252a2] font-medium flex items-center justify-center"
+                  onClick={handlePayment}
+                  disabled={isloading}
+                >
+                  {isloading ? (
+                    <DotLottieReact
+                      src="https://lottie.host/faaf7fb5-6078-4f3e-9f15-05b0964cdb4f/XCcsBA5RNq.lottie"
+                      loop
+                      autoplay
+                      style={{ width: 30, height: 30 }}
+                    />
+                  ) : (
+                    "Place Order"
+                  )}
+                </button>}
               </div>
             </div>
           </div>

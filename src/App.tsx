@@ -9,6 +9,7 @@ import ProductDetails from './pages/ProductDetails';
 import Cart from './components/cart/Cart';
 import Cookies from "./pages/tems$policy/Cookies"
 import Privacy from "./pages/tems$policy/Privacy"
+import CancellationPolicy from "./pages/tems$policy/CancellationPolicy"
 import Refund from "./pages/tems$policy/Refund"
 import ShippingAddress from "./pages/AddresShiping"
 import Shipping from "./pages/tems$policy/Shipping"
@@ -79,6 +80,7 @@ function App() {
             {/* <Route path="/policy" element={<Policy />} />  */}
             <Route path="/cookies" element={<Cookies />} />
             <Route path="/refund" element={<Refund />} />
+            <Route path="/cancellation_policy" element={<CancellationPolicy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/shipping" element={<Shipping />} />
             <Route path="/Privacy" element={<Privacy />} />

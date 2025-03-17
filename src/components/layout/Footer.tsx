@@ -11,9 +11,9 @@ export default function Footer() {
           <div>
             <Link to="/" className="flex items-center space-x-4 text-white mb-2">
             <img src={img1} alt="" style={{width:"50%"}} />
-
+              
             </Link>
-            <p className="mb-4">Your one-stop shop for all things technology</p>
+            <p className="mb-4">Your one-stop shop for all things tech</p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-white"><Facebook className="h-5 w-5" /></a>
               <a href="#" className="hover:text-white"><Twitter className="h-5 w-5" /></a>
@@ -21,7 +21,7 @@ export default function Footer() {
               <a href="#" className="hover:text-white"><Youtube className="h-5 w-5" /></a>
             </div>
           </div>
-
+          
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -34,10 +34,10 @@ export default function Footer() {
                 {item}
               </Link>
             ))}
-
+              
             </ul>
           </div>
-
+          
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Customer Service</h3>
             <ul className="space-y-2">
@@ -45,24 +45,25 @@ export default function Footer() {
               <li><Link to="/refund" className="hover:text-white">Returns & Exchanges</Link></li>
               <li><Link to="/terms" className="hover:text-white">Terms & Conditions</Link></li>
               <li><Link to="/privacy" className="hover:text-white">Privacy Policy</Link></li>
+              <li><Link to="/cancellation_policy" className="hover:text-white">Cancellation Policy</Link></li>
               <li><Link to="/cookies" className="hover:text-white">Cookies</Link></li>
               <li><Link to="/phonepay" className="hover:text-white">phonepay</Link></li>
             </ul>
           </div>
-
+          
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2">
-              <li>P.NO 97,Dakshinpuri Shir Krishanpura</li>
+              <li>P.NO 97,Dakshinpuri Shiri Krishanpura</li>
               <li>Jagatpura ,jaipur,raj-302017</li>
               <li>Phone: (+91)9119101723</li>
               <li>Email: info@digihub.com</li>
             </ul>
           </div>
         </div>
-
+        
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p>&copy; {new Date().getFullYear()} Digihub Unique Tech Solutions Private Limited All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Digihub Unique Tech Solutions Private Limited. All rights reserved.</p>
         </div>
       </div>
     </footer>
