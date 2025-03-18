@@ -26,9 +26,7 @@ const Terms = () => {
               <strong>Exchange Offer</strong>
             </h3>
             <ul className="terms-list">
-              <li>
-                <b><strong>Geographical Limitations:</strong></b> This offer is applicable only for residents of West Bengal and only in selected locations within West Bengal.
-              </li>
+            
               <li>
                 <b><strong>Availability:</strong></b> The exchange offer is valid until stocks last or until the offer expires, whichever is earlier.
               </li>
