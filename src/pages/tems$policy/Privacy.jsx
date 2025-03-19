@@ -36,7 +36,7 @@ const Privacy = () => {
             <h3 className="section-heading"><strong>Definitions</strong></h3>
             <p><b>Account:</b> Means a unique account created for You to access our Service.</p>
             <p><b>Affiliate:</b> Means an entity that controls, is controlled by, or is under common control with a party.</p>
-            <p><b>Company:</b> Refers to U62013RJ2024PTC093387, 213, 2nd floor Pushp enclave Tonk Road Pratap Nagar Jaipur Rajasthan- 302033.</p>
+            <p><b>Company:</b> Refers to U62013RJ2024PTC093387, Plot No 97, Dakshinpuri - I, Shrikishan, Sanganer, Jagatpura, Jaipur Rajasthan, India, 302017.</p>
             <p><b>Cookies:</b> Small files placed on Your device to store details of your browsing history.</p>
             <p><b>Device:</b> Refers to any device that can access the Service such as a computer, cellphone, or tablet.</p>
             <p><b>Personal Data:</b> Any information that relates to an identified or identifiable individual.</p>
@@ -88,7 +88,7 @@ const Privacy = () => {
             <p>We may update our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
 
             <h3 className="section-heading"><strong>Contact Us</strong></h3>
-            <p>If you have any questions about this Privacy Policy, You can contact us via email at <a href="mailto:Finunique Small Pvt Ltdnew@gmail.com">Finunique Small Pvt Ltdnew@gmail.com</a>.</p>
+            <p>If you have any questions about this Privacy Policy, You can contact us via email at <a href="mailto:Finunique Small Pvt Ltdnew@gmail.com">digihubtech@gmail.com</a>.</p>
           </div>
         </div>
       </section>

@@ -41,9 +41,7 @@ const Terms = () => {
               <li>
                 <b><strong>Refund Policy:</strong></b> Refunds or returns for the exchanged or used product will not be provided.
               </li>
-              <li>
-                <b><strong>Product Limitation:</strong></b> Only pressure cookers can be exchanged. No other products will be considered for exchange.
-              </li>
+             
               <li>
                 <b><strong>Store Limitation:</strong></b> Exchange offer is available only at selected stores.
               </li>
