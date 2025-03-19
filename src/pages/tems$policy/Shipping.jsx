@@ -27,7 +27,7 @@ const Shipping = () => {
           <div className="ck-content">
             <h3 className="section-heading">
               <strong>
-                Digihub Unique Tech Solutions Private Limited. CENTERS - Service
+                Digihub Unique Tech Solutions Private Limited. - Service
                 Terms &amp; Conditions
               </strong>
             </h3>
