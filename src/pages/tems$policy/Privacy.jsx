@@ -22,7 +22,7 @@ const Privacy = () => {
       <section className="tp-page-area pb-80 pt-50">
         <div className="container">
           <div className="ck-content">
-            <h3 className="section-heading"><strong>Privacy Policy for Digihub Unique Tech Solutions Private Limited</strong></h3>
+            <h3 className="section-heading"><strong>Privacy Policy for DIGIHUB UNIQUE TECH SOLUTIONS PRIVATE LIMITED</strong></h3>
             <p>Last updated: Feb, 20, 2024</p>
 
             <h3 className="section-heading"><strong>Introduction</strong></h3>

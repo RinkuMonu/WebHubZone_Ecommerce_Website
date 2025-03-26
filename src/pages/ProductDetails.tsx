@@ -175,7 +175,8 @@ const ProductDetails = ({ addToCart }: ProductDetailsProps) => {
 
               {/* Buy Now */}
               <div className="mb-4">
-                <button className="w-full px-4 py-2 text-white bg-purple-600 rounded hover:bg-purple-700">
+                <button className="w-full px-4 py-2 text-white bg-purple-600 rounded hover:bg-purple-700"
+                onClick={() => addToCart(product)}>
                   Buy Now
                 </button>
               </div>

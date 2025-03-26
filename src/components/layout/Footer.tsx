@@ -54,16 +54,16 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2">
-              <li>P.NO 97,Dakshinpuri Shiri Krishanpura</li>
-              <li>Jagatpura ,jaipur,raj-302017</li>
-              <li>Phone: (+91)9119101723</li>
+              <li>PLOT NO 97, DAKSHINPURI-I, SHRIKISHANPURA, SANGANER,</li>
+              <li>Jagatpura, Jaipur, Jaipur- 302017,Rajasthan</li>
+              <li>Phone: +919119101723</li>
               <li>Email: info@digihub.com</li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p>&copy; {new Date().getFullYear()} Digihub Unique Tech Solutions Private Limited. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} DIGIHUB UNIQUE TECH SOLUTIONS PRIVATE LIMITED. All rights reserved.</p>
         </div>
       </div>
     </footer>

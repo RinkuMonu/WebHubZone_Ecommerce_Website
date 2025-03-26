@@ -18,6 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick, cartItemCount }) => {
   const [user, setUser] = useState<User | null>(null);
   const [menuOpen, setMenuOpen] = useState(false); // For responsive menu toggle
   const [searchOpen, setSearchOpen] = useState(false); // For mobile search toggle
+  const [searchQuery , setSearchQuery] = useState()
 
   useEffect(() => {
     // Load user data from localStorage
@@ -92,6 +93,8 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick, cartItemCount }) => {
                       id="default-search"
                       className="block w-full p-4 ps-10 text-sm  rounded-lg"
                       placeholder="Search Category"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
                       required
                       style={{ border: "2px solid rgb(82, 82, 162)" }}
                     />
@@ -143,12 +146,12 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick, cartItemCount }) => {
                     {user && (
                       <div className="absolute hidden group-hover:block bg-white shadow-md rounded-lg  p-2 z-10">
                         <ul className="text-gray-700">
-                          <li className="py-1 px-3 hover:bg-gray-100 rounded-md cursor-pointer">
+                          {/* <li className="py-1 px-3 hover:bg-gray-100 rounded-md cursor-pointer">
                             Your Orders
                           </li>
                           <li className="py-1 px-3 hover:bg-gray-100 rounded-md cursor-pointer">
                             Profile
-                          </li>
+                          </li> */}
                           <li className="py-1 px-3 hover:bg-gray-100 rounded-md cursor-pointer">
                             <button
                               onClick={handleLogout}
@@ -164,7 +167,8 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick, cartItemCount }) => {
                   {/* Wishlist and Cart */}
                   <div className="flex items-center sm:gap-6">
                     {/* Wishlist */}
-                    <div className="relative flex items-center">
+                    <div className="relative flex items-center"
+                      onClick={onCartClick}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -180,7 +184,8 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick, cartItemCount }) => {
                         />
                       </svg>
                       <span className="absolute -top-2 -right-2 bg-[#5252a2] text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                        {/* {wishlistCount} */}0
+                        {/* {wishlistCount} */}
+                        {cartItemCount}
                       </span>
                     </div>
 

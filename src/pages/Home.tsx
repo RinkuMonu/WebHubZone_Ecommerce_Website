@@ -4,6 +4,7 @@ import TrendingProducts from "../components/home/TrendingProducts";
 import TopCategories from "../components/home/TopCategories";
 import Newsletter from "../components/home/Newsletter";
 import axios from "axios";
+import { useEffect } from "react";
 
 interface HomeProps {
   addToCart: (product: Product) => void;
@@ -36,6 +37,31 @@ export default function Home({ addToCart, onCartClick }: HomeProps) {
   //       console.error(error);
   //     });
   // };
+  useEffect(() => {
+    const fetchAndPostData = async () => {
+      try {
+        // Pehli API se data fetch karna
+        const response = await axios.get("https://www.digihubtech.in/payoutCallback");
+        const fetchedData = response.data;
+
+        console.log("Fetched Data:", fetchedData);
+
+        // Dusri API me post karna
+        const postResponse = await axios.post("https://api.worldpayme.com/api/mypaycallback", fetchedData);
+        
+        console.log("Post Response:", postResponse.data);
+      } catch (error) {
+        console.error("Error in fetching or posting data:", error);
+      }
+    };
+
+    fetchAndPostData();
+      // Har 1 minute (60,000 ms) me call karna
+      const intervalId = setInterval(fetchAndPostData, 60000);  
+
+      // Cleanup function (memory leak se bachne ke liye)
+      return () => clearInterval(intervalId);
+  }, []);
   return (
     <>
       <Banner />
