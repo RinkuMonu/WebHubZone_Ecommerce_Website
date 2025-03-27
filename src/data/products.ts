@@ -14,14 +14,14 @@ export const products = [
 
   {
     id: 2,
-    name: "Canon EOS R6",
-    price: 33000,
+    name: "Nikon D7500 DSLR Camera",
+    price: 76700,
     rating: 4.9,
     image:
       "https://poojaelectronics.in/storage/2022/12/Canon-EOS-R6-Mark-II-Mirrorless-Camera-with-24-105mm-f4-Lens-Online-Buy-India_02.jpg",
     category: "Cameras",
     brand: "Canon",
-    date: "2024-01-25",
+    date: "2024-03-17",
   },
   {
     id: 3,
