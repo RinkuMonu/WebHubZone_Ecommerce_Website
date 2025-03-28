@@ -128,11 +128,47 @@ const ProductDetails = ({ addToCart }: ProductDetailsProps) => {
           <div className="p-4">
             <ul className="text-base text-gray-500 list-disc">
               <li className="py-2">Operating System: Windows 11 Home</li>
-              <li className="py-2">Processor: Intel Core Celeron N4500</li>
+              <li className="py-2">Processor: Intel® Celeron® N4500</li>
               <li className="py-2">
-                Display: 35.6 cm (14") Display with TN, HD 1366 x 768, Acer
-                ComfyView LED-backlit TFT LCD, 16:9 aspect ratio, Ultra-slim
-                design, Mercury free, environment friendly
+              Size: 14.0 inches​
+ASUS Global
++3
+ASUS Global
++3
+LaptopMag
++3
+
+Resolution: Full HD (1920 x 1080)​
+LaptopMedia
++1
+ASUS Global
++1
+
+Aspect Ratio: 16:9​
+
+Refresh Rate: 60Hz​
+ASUS Global
++1
+ASUS Global
++1
+
+Brightness: 250 nits​
+LaptopMedia
++3
+ASUS Global
++3
+ASUS Global
++3
+
+Color Gamut: 45% NTSC​
+ASUS Global
++3
+ASUS Global
++3
+ASUS Global
++3
+
+Screen-to-Body Ratio: 83%
               </li>
               <li className="py-2">Graphics: Intel UHD Graphics</li>
             </ul>
