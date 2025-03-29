@@ -4,6 +4,7 @@ import cartReducer from './reduxslice/CartSlice';
 const store = configureStore({
   reducer: {
     cart: cartReducer,
+    wishlist: wishlistReducer,
   }, 
 });
 
