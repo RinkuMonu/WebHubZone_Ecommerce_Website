@@ -21,20 +21,20 @@ interface ProductDetailsProps {
 
 const ProductDetails = ({ addToCart }: ProductDetailsProps) => {
   const [quantity, setQuantity] = useState(1);
-   const [isModalOpen, setIsModalOpen] = useState(false); // State to track modal visibility
-  
-    // Function to open the modal
-    const openModal = () => {
-      setIsModalOpen(true);
-    };
-  
-    // Function to close the modal
-    const closeModal = () => {
-      setIsModalOpen(false);
-    };
-    const [activeTab, setActiveTab] = useState<"description" | "reviews">(
-      "description"
-    );
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to track modal visibility
+
+  // Function to open the modal
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  // Function to close the modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+  const [activeTab, setActiveTab] = useState<"description" | "reviews">(
+    "description"
+  );
   const handleIncrease = () => setQuantity((prev) => prev + 1);
   const handleDecrease = () => {
     if (quantity > 1) setQuantity((prev) => prev - 1);
@@ -130,45 +130,45 @@ const ProductDetails = ({ addToCart }: ProductDetailsProps) => {
               <li className="py-2">Operating System: Windows 11 Home</li>
               <li className="py-2">Processor: Intel® Celeron® N4500</li>
               <li className="py-2">
-              Size: 14.0 inches​
-ASUS Global
-+3
-ASUS Global
-+3
-LaptopMag
-+3
+                Size: 14.0 inches
+                ASUS Global
+                +3
+                ASUS Global
+                +3
+                LaptopMag
+                +3
 
-Resolution: Full HD (1920 x 1080)​
-LaptopMedia
-+1
-ASUS Global
-+1
+                Resolution: Full HD (1920 x 1080)
+                LaptopMedia
+                +1
+                ASUS Global
+                +1
 
-Aspect Ratio: 16:9​
+                Aspect Ratio: 16:9
 
-Refresh Rate: 60Hz​
-ASUS Global
-+1
-ASUS Global
-+1
+                Refresh Rate: 60Hz
+                ASUS Global
+                +1
+                ASUS Global
+                +1
 
-Brightness: 250 nits​
-LaptopMedia
-+3
-ASUS Global
-+3
-ASUS Global
-+3
+                Brightness: 250 nits
+                LaptopMedia
+                +3
+                ASUS Global
+                +3
+                ASUS Global
+                +3
 
-Color Gamut: 45% NTSC​
-ASUS Global
-+3
-ASUS Global
-+3
-ASUS Global
-+3
+                Color Gamut: 45% NTSC
+                ASUS Global
+                +3
+                ASUS Global
+                +3
+                ASUS Global
+                +3
 
-Screen-to-Body Ratio: 83%
+                Screen-to-Body Ratio: 83%
               </li>
               <li className="py-2">Graphics: Intel UHD Graphics</li>
             </ul>
@@ -202,7 +202,7 @@ Screen-to-Body Ratio: 83%
                 </div>
 
                 {/* Add to Cart */}
-                <div className="flex items-center space-x-2 mb-4"  onClick={() => addToCart(product)}>
+                <div className="flex items-center space-x-2 mb-4" onClick={() => addToCart(product)}>
                   <button className="flex-1 px-16 py-2 border rounded bg-white hover:bg-gray-100">
                     Add To Cart
                   </button>
@@ -212,7 +212,7 @@ Screen-to-Body Ratio: 83%
               {/* Buy Now */}
               <div className="mb-4">
                 <button className="w-full px-4 py-2 text-white bg-purple-600 rounded hover:bg-purple-700"
-                onClick={() => addToCart(product)}>
+                  onClick={() => addToCart(product)}>
                   Buy Now
                 </button>
               </div>
@@ -235,7 +235,7 @@ Screen-to-Body Ratio: 83%
               </div>
 
               <div className="">
-               
+
 
                 {/* Share Section */}
                 <div className="mb-4 flex items-center gap-4">
@@ -273,54 +273,52 @@ Screen-to-Body Ratio: 83%
         </div>
       </div>
       <div className="p-4">
-      {/* Tabs */}
-      <div className="flex gap-4 border-b my-12 justify-center">
-        <button
-          className={`px-4 py-2 text-xl font-medium ${
-            activeTab === "description"
-              ? "border-b-2 border-black text-black"
-              : "text-gray-500"
-          }`}
-          onClick={() => setActiveTab("description")}
-        >
-          Description
-        </button>
-        <button
-          className={`px-4 py-2 text-xl font-medium ${
-            activeTab === "reviews"
-              ? "border-b-2 border-black text-black"
-              : "text-gray-500"
-          }`}
-          onClick={() => setActiveTab("reviews")}
-        >
-          Reviews (0)
-        </button>
-      </div>
+        {/* Tabs */}
+        <div className="flex gap-4 border-b my-12 justify-center">
+          <button
+            className={`px-4 py-2 text-xl font-medium ${activeTab === "description"
+                ? "border-b-2 border-black text-black"
+                : "text-gray-500"
+              }`}
+            onClick={() => setActiveTab("description")}
+          >
+            Description
+          </button>
+          <button
+            className={`px-4 py-2 text-xl font-medium ${activeTab === "reviews"
+                ? "border-b-2 border-black text-black"
+                : "text-gray-500"
+              }`}
+            onClick={() => setActiveTab("reviews")}
+          >
+            Reviews (0)
+          </button>
+        </div>
 
-      {/* Content */}
-      {activeTab === "description" && (
-        <div className="text-sm font-normal leading-6 mb-4 text-[#55585b] p-8">
-          <p className="leading-6 mb-4">
-            Acer Aspire 3 Intel Core Celeron N4500 Processor Laptop 
-            (Windows 11 Home/ 8 GB/ 256 GB SSD) A324-45 with 35.56 cm (14") TN 
-            HD Display, Pure Silver, 1.3 KG
-          </p>
-          <ul className="mt-2 list-disc list-inside">
-            <li className="leading-6 mb-4">Operating System: Windows 11 Home</li>
-            <li className="leading-6 mb-4">Processor: Intel Core Celeron N4500</li>
-            <li className="leading-6 mb-4">Display: 35.6 cm (14") Display with TN, HD 1366 x 768, Acer ComfyView LED-backlit TFT LCD, 16:9 aspect ratio, Ultra-slim design, Mercury free, environment friendly</li>
-            <li className="leading-6 mb-4">Graphics: Intel UHD Graphics</li>
-            <li className="leading-6 mb-4">Memory: Dual-channel LPDDR4X SDRAM support: 8GB of LPDDR4X onboard system memory</li>
-            <li className="leading-6 mb-4">Storage: 256 GB, PCIe Gen3 8 Gb/s up to 4 lanes, NVMe Support up to 1 TB</li>
-          </ul>
-        </div>
-      )}
-      {activeTab === "reviews" && (
-        <div className="text-sm text-gray-500">
-          <p>No reviews yet. Be the first to write a review!</p>
-        </div>
-      )}
-    </div>
+        {/* Content */}
+        {activeTab === "description" && (
+          <div className="text-sm font-normal leading-6 mb-4 text-[#55585b] p-8">
+            <p className="leading-6 mb-4">
+              Acer Aspire 3 Intel Core Celeron N4500 Processor Laptop
+              (Windows 11 Home/ 8 GB/ 256 GB SSD) A324-45 with 35.56 cm (14") TN
+              HD Display, Pure Silver, 1.3 KG
+            </p>
+            <ul className="mt-2 list-disc list-inside">
+              <li className="leading-6 mb-4">Operating System: Windows 11 Home</li>
+              <li className="leading-6 mb-4">Processor: Intel Core Celeron N4500</li>
+              <li className="leading-6 mb-4">Display: 35.6 cm (14") Display with TN, HD 1366 x 768, Acer ComfyView LED-backlit TFT LCD, 16:9 aspect ratio, Ultra-slim design, Mercury free, environment friendly</li>
+              <li className="leading-6 mb-4">Graphics: Intel UHD Graphics</li>
+              <li className="leading-6 mb-4">Memory: Dual-channel LPDDR4X SDRAM support: 8GB of LPDDR4X onboard system memory</li>
+              <li className="leading-6 mb-4">Storage: 256 GB, PCIe Gen3 8 Gb/s up to 4 lanes, NVMe Support up to 1 TB</li>
+            </ul>
+          </div>
+        )}
+        {activeTab === "reviews" && (
+          <div className="text-sm text-gray-500">
+            <p>No reviews yet. Be the first to write a review!</p>
+          </div>
+        )}
+      </div>
       <div className="my-8">
         <h3 className="text-4xl font-bold flex items-center justify-center py-6">
           Related Products
@@ -519,9 +517,9 @@ Screen-to-Body Ratio: 83%
                                   </div>
 
                                   {/* Add to Cart */}
-                                  <div className="flex items-center space-x-2 mb-4"  onClick={() => addToCart(product)}>
+                                  <div className="flex items-center space-x-2 mb-4" onClick={() => addToCart(product)}>
                                     <button className="flex-1 px-16 py-2 border rounded bg-white hover:bg-gray-100"
-                                   
+
                                     >
                                       Add To Cart
                                     </button>
@@ -622,7 +620,7 @@ Screen-to-Body Ratio: 83%
           ))}
         </div>
       </div>
-     
+
     </div>
   );
 };

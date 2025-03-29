@@ -52,7 +52,7 @@ export default function CategoryPage() {
         {/* Filters Sidebar */}
         <div className={`lg:w-64 space-y-6 ₹{showFilters ? 'block' : 'hidden lg:block'}`}>
           {/* Price Range */}
-          <div>
+          {/* <div>
             <h3 className="font-semibold mb-4">Price Range</h3>
             <div className="space-y-2">
               <input
@@ -68,9 +68,9 @@ export default function CategoryPage() {
                 <span>₹{priceRange[1]}</span>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          {/* Brands */}
+          {/* Brands
           <div>
             <h3 className="font-semibold mb-4">Brands</h3>
             <div className="space-y-2">
@@ -92,7 +92,7 @@ export default function CategoryPage() {
                 </label>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Sort */}
           <div>

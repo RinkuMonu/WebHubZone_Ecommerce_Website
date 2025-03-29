@@ -10,8 +10,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <Link to="/" className="flex items-center space-x-4 text-white mb-2">
-            <img src={img1} alt="" style={{width:"50%"}} />
-              
+              <img src={img1} alt="" style={{ width: "50%" }} />
+
             </Link>
             <p className="mb-4">Your one-stop shop for all things tech</p>
             <div className="flex space-x-4">
@@ -21,23 +21,27 @@ export default function Footer() {
               <a href="#" className="hover:text-white"><Youtube className="h-5 w-5" /></a>
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-            {[ 'Laptops', 'Phones', 'Speakers', 'Electronics', 'Accessories'].map((item) => (
-              <Link
-                key={item}
-                to={`/category/${item.toLowerCase()}`}
-                className=" h-full flex items-center"
-              >
-                {item}
-              </Link>
-            ))}
-              
+              {["Computer and Peripherals",
+                "Cellular Gadgets",
+                "Speakers",
+                "Tech Gadgets",
+                "Accessories",].map((item) => (
+                  <Link
+                    key={item}
+                    to={`/category/${item.toLowerCase()}`}
+                    className=" h-full flex items-center"
+                  >
+                    {item}
+                  </Link>
+                ))}
+
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Customer Service</h3>
             <ul className="space-y-2">
@@ -47,10 +51,10 @@ export default function Footer() {
               <li><Link to="/privacy" className="hover:text-white">Privacy Policy</Link></li>
               <li><Link to="/cancellation_policy" className="hover:text-white">Cancellation Policy</Link></li>
               <li><Link to="/cookies" className="hover:text-white">Cookies</Link></li>
-              
+
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2">
@@ -61,7 +65,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p>&copy; {new Date().getFullYear()} DIGIHUB UNIQUE TECH SOLUTIONS PRIVATE LIMITED. All rights reserved.</p>
         </div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const categories = [
   {
-    name: "Computer Peripherals",
+    name: "Computer and Peripherals",
     icon: Laptop,
     count: "450+ Products",
     color: "bg-blue-100",

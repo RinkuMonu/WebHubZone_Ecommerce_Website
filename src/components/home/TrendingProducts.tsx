@@ -40,21 +40,21 @@ const TrendingProducts = ({
     if (quantity > 1) setQuantity((prev) => prev - 1);
   };
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white px-20">
       <div className="container  sm:px-4">
         <h2 className="text-4xl font-bold mb-8">
           <span className="text-[#5252a2]">Trending</span> Products
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.slice(0, 6).map((product) => (
+          {products.slice(30, 60).map((product) => (
             <div
               key={product.id}
               className="group grid grid-cols-1 w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow"
             >
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden cursor-pointer "  onClick={openModal}>
                 <img
-                  className="p-8 rounded-lg w-96 h-64 object-cover transform group-hover:scale-105 transition duration-300"
+                  className="p-8 rounded-lg w-96 h-64 object-contain transform  transition duration-300"
                   src={product.image}
                   alt={product.name}
                 />
