@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 
 const categories = [
   {
-    name: "Laptops",
+    name: "Computer Peripherals",
     icon: Laptop,
     count: "450+ Products",
     color: "bg-blue-100",
     textColor: "text-blue-600",
   },
   {
-    name: "Phones",
+    name: "Cellular Gadgets",
     icon: Smartphone,
     count: "320+ Products",
     color: "bg-green-100",
@@ -25,7 +25,7 @@ const categories = [
     textColor: "text-purple-600",
   },
   {
-    name: "Electronics",
+    name: "Tech Gadgets",
     icon: Cpu,
     count: "520+ Products",
     color: "bg-red-100",
@@ -44,7 +44,7 @@ export default function TopCategories() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8">Top Categoriees</h2>
+        <h2 className="text-3xl font-bold mb-8">Top Categories</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
    
 
@@ -62,7 +62,7 @@ export default function TopCategories() {
                     className={`h-12 w-12 ₹{category.textColor}`}
                   />
                   <h3 className="text-xl font-semibold">{category.name}</h3>
-                  <p className="text-gray-600">{category.count}</p>
+                  {/* <p className="text-gray-600">{category.count}</p> */}
                 </div>
               </div>
             </Link>

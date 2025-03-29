@@ -56,10 +56,10 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick, cartItemCount }) => {
   };
 
   const categories = [
-    "Laptops",
-    "Phones",
+    "Computer and Peripherals",
+    "Cellular Gadgets",
     "Speakers",
-    "Electronics",
+    "Tech Gadgets",
     "Accessories",
   ];
   console.log("userdataaaaaaaaa", user);
