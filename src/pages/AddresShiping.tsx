@@ -165,10 +165,11 @@ function AddressShiping({ cartItems }) {
       );
 
       
-      console.log("responseeeeee", response.data?.payment_url);
+      console.log("responseeeeee", response.data?.payment_link);
+      console.log("responseeeeeerr", response.data?.data?.payment_link);
 
 
-      const paymentLink = response.data?.payment_url;
+      const paymentLink = response.data?.data?.payment_link;
       console.log(paymentLink)
       const cleanedUrl = paymentLink.replace(/\\/g, "");
 
