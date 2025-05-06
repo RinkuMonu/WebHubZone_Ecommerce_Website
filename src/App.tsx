@@ -22,6 +22,9 @@ import { addItemToCart } from './reduxslice/CartSlice';
 import Orders from './pages/orders';
 import ShoppingCart from './pages/BackCart';
 // import {Phonepay} from './components/Phonepay/Phonepay';
+import Checkout from './components/checkout/checkout';
+import PaymentStatus from './components/PaymentStatus/PaymentStatus';
+
 
 function App() {
    const location = useLocation();
@@ -87,6 +90,9 @@ function App() {
             <Route path="/address" element={<ShippingAddress  cartItems={cartItems} onClose={toggleCart}/>} />
             <Route path='/orders' element={<Orders />} />
             <Route path='/cart' element={<ShoppingCart cartItems={cartItems}/> } />
+            <Route path='/paymentstatus' element={<PaymentStatus />} />
+            <Route path='/checkout' element={<Checkout />} />
+
             {/* <Route path="/phonepay" element={<Phonepay/>} />  */}
 
           </Routes>
