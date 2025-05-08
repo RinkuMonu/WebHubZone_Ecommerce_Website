@@ -24,6 +24,7 @@ import ShoppingCart from './pages/BackCart';
 // import {Phonepay} from './components/Phonepay/Phonepay';
 import Checkout from './components/checkout/checkout';
 import PaymentStatus from './components/PaymentStatus/PaymentStatus';
+import ResultPage from './pages/ResultPage';
 
 
 function App() {
@@ -92,6 +93,7 @@ function App() {
             <Route path='/cart' element={<ShoppingCart cartItems={cartItems}/> } />
             <Route path='/paymentstatus' element={<PaymentStatus />} />
             <Route path='/checkout' element={<Checkout />} />
+            <Route path='/resultPage' element={<ResultPage/>} />
 
             {/* <Route path="/phonepay" element={<Phonepay/>} />  */}
 

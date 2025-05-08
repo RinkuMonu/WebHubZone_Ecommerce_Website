@@ -4,7 +4,7 @@ import QRCode from "react-qr-code";
 
 import { ChevronLeft, Wallet, Check } from "lucide-react";
 import logo from "../assest/4.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 interface Address {
@@ -97,6 +97,10 @@ function AddressShiping({ cartItems }) {
   const [showCouponInput, setShowCouponInput] = useState(false);
   const [upiIntent, setUpiIntent] = useState(null);
   const [isloading, setIsLoading] = useState(false);
+  const [reference, setReference] = useState("");
+  const navigate = useNavigate();
+  const [timeLeft, setTimeLeft] = useState(0); // 4 minutes = 240 seconds
+  const [startTimer, setStartTimer] = useState(false); 
 
   const subtotal = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -121,6 +125,8 @@ function AddressShiping({ cartItems }) {
     city: "",
     address: "",
   });
+  const token =
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI4IiwianRpIjoiYzNhNWRmMzEwODdkYTY4YzUxN2IwZTRjMGU0NGIyNmFmOWM4ODJlOWJiZWYxZDM3NmY5ZjRiOTcxM2VhZWFmYjZkOTgyMjYxMDYwOGI3ODYiLCJpYXQiOjE3NDQ3MTI2OTguMjIxMzYzLCJuYmYiOjE3NDQ3MTI2OTguMjIxMzY2LCJleHAiOjE3NzYyNDg2OTguMjE4NzY3LCJzdWIiOiIyNDkiLCJzY29wZXMiOltdfQ.VWB2ejh3M4HXA3hAO37qbOV1Ylx5wKZ_NK1GQK7PrgY0S6xAnQwE_MwcNn-ln_aPFt5cz_ZzeTmAKkLmQh9oOJbHXRmA8MFG_WcWm6HPZt_F_JqyfKdtmW9rgv27PuNtozLIpzUUTed8RMXh6ci2wjqRFVng-jVrFkb-IHJB2Ivm3OjO8wH4CHXF8yvtQVKnCCg01r3IyLdcB1KtwK6Q_Rta8iNTimKTsGxJ_FnnOjCuYPETuP1dJLVXB9F_EmxZYK59Z_Cc7NWsDn_fMmRB4sJG3TtG9eSlwl_wJ8pIy4ou8uyiedRqSHMPgHva4Pk6OY8g4lGr4gxb3ry4S5ax5aRxTtmBt64xn0Wgg5tYKxHON8A7_t0F0G-aQeWO1CxcYbF2lfU507e9X9NE8TeGzoexuVI2NGiOptJG9oRlTDNEL981hvucdkSfi6DQVG7vrD7DbFs5XvikbxpPz4ooE7JSPzNnLBPPkj7Yl17DIgWCIgSzrVgEsuW5RcuTURLVrtPRv1qX7lgiXtqxf_TrwAaoOaYnTTinZYoQmP-uyPy8krH0Sr42CtjIRYKYBNWJV0jXzgH36RXVoiOxq8w7rmdGqkbCs4CNDoX6FhJa5dSwjz0tn9t0Dt2NMogyHf4zxQDHdptkSN90sXhoAFUdYUlVRfZ7Z8UUSTXOW2j6Fsw";
 
   const shipping =
     shippingMethods.find((m) => m.id === selectedShipping)?.price || 0;
@@ -136,21 +142,20 @@ function AddressShiping({ cartItems }) {
   const generateReferenceNumber = () => {
     const timestamp = Date.now(); // Get current timestamp
     const randomNum = Math.floor(Math.random() * 10000); // Generate a random number between 0 and 9999
-    return `${timestamp}-${randomNum}`; // Combine timestamp and random number
+    return `${timestamp}${randomNum}`; // Combine timestamp and random number
   };
 
   const handlePayment = async () => {
     setIsLoading(true);
-    const reference = generateReferenceNumber();
-    const token =
-      "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI4IiwianRpIjoiYzNhNWRmMzEwODdkYTY4YzUxN2IwZTRjMGU0NGIyNmFmOWM4ODJlOWJiZWYxZDM3NmY5ZjRiOTcxM2VhZWFmYjZkOTgyMjYxMDYwOGI3ODYiLCJpYXQiOjE3NDQ3MTI2OTguMjIxMzYzLCJuYmYiOjE3NDQ3MTI2OTguMjIxMzY2LCJleHAiOjE3NzYyNDg2OTguMjE4NzY3LCJzdWIiOiIyNDkiLCJzY29wZXMiOltdfQ.VWB2ejh3M4HXA3hAO37qbOV1Ylx5wKZ_NK1GQK7PrgY0S6xAnQwE_MwcNn-ln_aPFt5cz_ZzeTmAKkLmQh9oOJbHXRmA8MFG_WcWm6HPZt_F_JqyfKdtmW9rgv27PuNtozLIpzUUTed8RMXh6ci2wjqRFVng-jVrFkb-IHJB2Ivm3OjO8wH4CHXF8yvtQVKnCCg01r3IyLdcB1KtwK6Q_Rta8iNTimKTsGxJ_FnnOjCuYPETuP1dJLVXB9F_EmxZYK59Z_Cc7NWsDn_fMmRB4sJG3TtG9eSlwl_wJ8pIy4ou8uyiedRqSHMPgHva4Pk6OY8g4lGr4gxb3ry4S5ax5aRxTtmBt64xn0Wgg5tYKxHON8A7_t0F0G-aQeWO1CxcYbF2lfU507e9X9NE8TeGzoexuVI2NGiOptJG9oRlTDNEL981hvucdkSfi6DQVG7vrD7DbFs5XvikbxpPz4ooE7JSPzNnLBPPkj7Yl17DIgWCIgSzrVgEsuW5RcuTURLVrtPRv1qX7lgiXtqxf_TrwAaoOaYnTTinZYoQmP-uyPy8krH0Sr42CtjIRYKYBNWJV0jXzgH36RXVoiOxq8w7rmdGqkbCs4CNDoX6FhJa5dSwjz0tn9t0Dt2NMogyHf4zxQDHdptkSN90sXhoAFUdYUlVRfZ7Z8UUSTXOW2j6Fsw";
+    const newRef = generateReferenceNumber(); // ✅ Step 1: Generate and store in variable
+    setReference(newRef);
 
     try {
       const response = await axios.post(
         "https://api.worldpayme.com/api/v1.1/createUpiIntent",
         {
-          amount: total.toString(),
-          reference: reference,
+          amount: "100",
+          reference: newRef,
           name: userdata.name,
           mobile: userdata.phone,
           email: userdata.email,
@@ -168,6 +173,8 @@ function AddressShiping({ cartItems }) {
       const rawLink = response.data?.data?.upiIntent;
       const cleanedLink = rawLink.replace(/\\/g, "");
       setUpiIntent(cleanedLink); // Set it in state to render QR
+      setTimeLeft(240);      // 4 min in seconds
+    setStartTimer(true);
     } catch (error) {
       console.log("Payment Error:", error);
     } finally {
@@ -206,6 +213,74 @@ function AddressShiping({ cartItems }) {
     }
   };
 
+  let totalTime = 0;
+
+  useEffect(() => {
+    if (!reference) return;
+
+    const maxDuration = 4 * 60 * 1000; // 4 minutes
+    const intervalTime = 15000; // every 15 seconds
+
+    const interval = setInterval(async () => {
+      totalTime += intervalTime;
+
+      try {
+        setIsLoading(true);
+
+        const response = await axios.get(
+          `https://api.worldpayme.com/api/v1.1/payinTransactionCheckStatus/${reference}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+        console.log("responseeeeeeeeee", response.data);
+        const { data } = response.data;
+        const txnStatus = data?.status || "Unknown";
+
+        if (txnStatus === "Success" || txnStatus === "Failed") {
+          clearInterval(interval);
+          navigate(
+            `/resultPage?status=${txnStatus}&txnId=${data.transactionNo}`
+          );
+        } else if (totalTime >= maxDuration) {
+          clearInterval(interval);
+          navigate(`/resultPage?status=timeout&txnId=${reference}`);
+        }
+      } catch (error) {
+        console.error("Error fetching payout status:", error);
+        clearInterval(interval);
+        // navigate(`/resultPage?status=fail&txnId=${reference}`);
+      } finally {
+        setIsLoading(false);
+      }
+    }, intervalTime);
+
+    return () => clearInterval(interval); // Clean up
+  }, [reference]);
+
+  useEffect(() => {
+    if (!startTimer || timeLeft <= 0) return;
+  
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => prev - 1);
+    }, 1000);
+  
+    return () => clearInterval(timer);
+  }, [startTimer, timeLeft]);
+  
+
+  // Format time for display: MM:SS
+  const formatTime = (seconds: number) => {
+    const min = Math.floor(seconds / 60)
+      .toString()
+      .padStart(2, "0");
+    const sec = (seconds % 60).toString().padStart(2, "0");
+    return `${min}:${sec}`;
+  };
   return (
     <div className=" min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 lg:px-12 md:px-8 py-8">
@@ -485,7 +560,6 @@ function AddressShiping({ cartItems }) {
                   )}
                 </div>
               </div>
-            
 
               {/* Shipping Method */}
               <div className="mb-8">
@@ -603,23 +677,24 @@ function AddressShiping({ cartItems }) {
               </div>
             </div>
             {upiIntent && (
-                <div style={{ marginTop: "20px", textAlign: "center" }}>
-                  <p>Scan this QR Code to pay:</p>
-                  <QRCode value={upiIntent} size={200} />
-                  <p style={{ marginTop: "10px", wordBreak: "break-all" }}>
-                    Or click to open:{" "}
-                    <a
-                      href={upiIntent}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {upiIntent}
-                    </a>
-                  </p>
+              <div className="flex flex-col items-center justify-center mt-6 mb-6 bg-white shadow-md rounded-lg p-6">
+                <p className="text-lg font-medium text-gray-700 mb-3">
+                  Scan this QR Code to pay:
+                </p>
+                <QRCode value={upiIntent} size={200} />
+                {/* Uncomment if you want to show UPI URL */}
+                {/* <p className="text-sm mt-3 break-all text-blue-600 underline">
+      <a href={upiIntent} target="_blank" rel="noopener noreferrer">
+        {upiIntent}
+      </a>
+    </p> */}
+                <div className="mt-4 text-center font-semibold text-xl text-green-700">
+                  Time remaining: {formatTime(timeLeft)}
                 </div>
-              )}
+              </div>
+            )}
           </div>
-          
+
           {/* Right Column - Order Summary */}
           <div className="md:w-5/12">
             <div className="bg-white rounded-lg shadow-sm p-6 sticky top-6">
@@ -643,6 +718,7 @@ function AddressShiping({ cartItems }) {
                   </div>
                 ))}
               </div>
+
               {/* Price Summary */}
               <div className="border-t pt-4 space-y-2">
                 <div className="flex justify-between">
@@ -710,12 +786,9 @@ function AddressShiping({ cartItems }) {
                 )}
               </div>
             </div>
-            
           </div>
-          
         </div>
       </div>
-  
     </div>
   );
 }
