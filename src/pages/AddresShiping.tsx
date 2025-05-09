@@ -154,7 +154,7 @@ function AddressShiping({ cartItems }) {
       const response = await axios.post(
         "https://api.worldpayme.com/api/v1.1/createUpiIntent",
         {
-          amount: "100",
+          amount: total.toString(),
           reference: newRef,
           name: userdata.name,
           mobile: userdata.phone,
