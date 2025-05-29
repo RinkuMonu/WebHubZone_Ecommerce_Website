@@ -93,14 +93,14 @@ function AddressShiping({ cartItems }) {
 
   const [selectedAddress, setSelectedAddress] = useState<string>("");
   const [selectedShipping, setSelectedShipping] = useState<string>("1");
-  const [selectedPayment, setSelectedPayment] = useState<string>("phonepe");
+  const [selectedPayment, setSelectedPayment] = useState<string>("");
   const [showCouponInput, setShowCouponInput] = useState(false);
   const [upiIntent, setUpiIntent] = useState(null);
   const [isloading, setIsLoading] = useState(false);
   const [reference, setReference] = useState("");
   const navigate = useNavigate();
   const [timeLeft, setTimeLeft] = useState(0); // 4 minutes = 240 seconds
-  const [startTimer, setStartTimer] = useState(false); 
+  const [startTimer, setStartTimer] = useState(false);
 
   const subtotal = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -145,38 +145,116 @@ function AddressShiping({ cartItems }) {
     return `${timestamp}${randomNum}`; // Combine timestamp and random number
   };
 
+  // const handlePayment = async () => {
+  //   setIsLoading(true);
+  //   const newRef = generateReferenceNumber(); // ✅ Step 1: Generate and store in variable
+  //   setReference(newRef);
+
+  //   try {
+  //     const response = await axios.post(
+  //       "https://api.worldpayme.com/api/v1.1/createUpiIntent",
+  //       {
+  //         amount: total.toString(),
+  //         reference: newRef,
+  //         name: userdata.name,
+  //         mobile: userdata.phone,
+  //         email: userdata.email,
+  //         userId: "67b6f05e6a935705d8fc54ee",
+  //         myip: "666666",
+  //       },
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer ${token}`,
+  //           "Content-Type": "application/json",
+  //         },
+  //       }
+  //     );
+
+  //     const rawLink = response.data?.data?.upiIntent;
+  //     const cleanedLink = rawLink.replace(/\\/g, "");
+  //     setUpiIntent(cleanedLink); // Set it in state to render QR
+  //     setTimeLeft(240); // 4 min in seconds
+  //     setStartTimer(true);
+  //   } catch (error) {
+  //     console.log("Payment Error:", error);
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
+
   const handlePayment = async () => {
+    if (!userdata.name || !userdata.phone || !userdata.email) {
+      alert("Please fill all required shipping fields.");
+      return;
+    }
+
     setIsLoading(true);
-    const newRef = generateReferenceNumber(); // ✅ Step 1: Generate and store in variable
+    const newRef = generateReferenceNumber();
     setReference(newRef);
 
     try {
-      const response = await axios.post(
-        "https://api.worldpayme.com/api/v1.1/createUpiIntent",
-        {
-          amount: total.toString(),
-          reference: newRef,
-          name: userdata.name,
-          mobile: userdata.phone,
-          email: userdata.email,
-          userId: "67b6f05e6a935705d8fc54ee",
-          myip: "666666",
-        },
-        {
+      // 🔧 Define per-gateway configuration
+      const gatewayConfigs = {
+        upi1: {
+          apiUrl: "https://api.worldpayme.com/api/v1.1/createUpiIntent",
+          payload: {
+            amount: total.toString(),
+            reference: newRef,
+            name: userdata.name,
+            mobile: userdata.phone,
+            email: userdata.email,
+            userId: "67b6f05e6a935705d8fc54ee", // 🔑 WorldPayMe Merchant ID
+            myip: "666666",
+          },
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${token}`, // 🔑 WorldPayMe token
             "Content-Type": "application/json",
           },
-        }
-      );
+          extractIntent: (res) => res.data?.data?.upiIntent,
+        },
+        upi2: {
+          apiUrl: "https://api.worldpayme.com/api/v1.1/createUpiIntent", // 🆕 Replace with actual
+          payload: {
+            amount: total.toString(),
+            reference: newRef,
+            name: userdata.name,
+            mobile: userdata.phone,
+            email: userdata.email,
+            userId: "67b6f05e6a935705d8fc54ee", // 🆕 your merchant 2 ID
+             myip: "666666",
+          },
+          headers: {
+            Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI4IiwianRpIjoiNzE1ZDJlODJiZTYxYzdiYjk1YzZhNDA0ZTdlYTNiZDRjOTNkYWRmNWEzYmJiYmExYmFhNTI2ZGIxNzVkNjhhNmI1YmZjZWU3N2ZmMTgwMDkiLCJpYXQiOjE3NDg1MTgwNTYuMjcyNDQyLCJuYmYiOjE3NDg1MTgwNTYuMjcyNDQ0LCJleHAiOjE3ODAwNTQwNTYuMjY5OTk3LCJzdWIiOiIzMDMiLCJzY29wZXMiOltdfQ.ElJzC40DRfPxMCJn8hKPJwOQqinyzK2yRONmLIky4IElGAeDJzghUbiBQg6uVIe0qMnQZCTY66trEbVh25TJZYpWv_rEyP4LYMhFNtyHOyEothKg-RAWt99y4baqf10wp5Mfl1YdUI3lQaYHKYF1B0y8gJFtLghvj8nxsWdi5a_V7TfkzcGGWy5HtqZnaYyDWxJCSIjm41E2mfJVoDrGz5_DMHCQq50JHN8rJwlx4R6pH4uD-D-xoYZsTgdg94ogkuuyWRpNpHTPx6ku9D6AVqO4gz8pGysphatUaIUeAHciNDNVW_hU3ReHMXUc6GsySmPjoogmRZJqtrtv432N4dhVZYZM8uPH8LmI437xsiT8Pwh8eigfJeiizElf0_sMgeNL7wwfkfsIkjWiNQlai9l0tgXpkSh_B4WHwbGMlhjN-xebvWE3NmiUu8Ut9m-aHyL-TCLX_hbkGepgEBilGiyqPzbpP9oNPXO7t3Js4MxAaFQjP4M2hHyHfxMPUUCbUEboS2cdL9uQpag_X9Z7w9cQMTaC6bFjv-RuAJhwGvSMHvs3paOZqdZxRd4bwybXUyCIisqdG1FHoFgPoz5tA5bYZ8CpILbYGuxPHeCpN51c0_QhOfGcEUT5st7PUadqwiQG1WJBOQ6XHquUNAt9ZySDpB9DjLtQ4jxjQbyer6I`, // 🆕 your token
+            "Content-Type": "application/json",
+          },
+          extractIntent: (res) => res.data?.data?.upiIntent || res.data?.upiUrl,
+        },
+      };
+   
+      if (!selectedPayment) {
+        alert("Please select a payment method.");
+        setIsLoading(false);
+        return;
+      }
+      const config = gatewayConfigs[selectedPayment];
 
-      const rawLink = response.data?.data?.upiIntent;
+      if (!config) throw new Error("Unsupported payment method");
+
+      const response = await axios.post(config.apiUrl, config.payload, {
+        headers: config.headers,
+      });
+     
+      const rawLink = config.extractIntent(response);
+     
       const cleanedLink = rawLink.replace(/\\/g, "");
-      setUpiIntent(cleanedLink); // Set it in state to render QR
-      setTimeLeft(240);      // 4 min in seconds
-    setStartTimer(true);
+        console.log("cleanedLink",rawLink)
+
+      setUpiIntent(cleanedLink);
+      setTimeLeft(240);
+      setStartTimer(true);
     } catch (error) {
-      console.log("Payment Error:", error);
+      console.error("Payment Error:", error);
+      alert("Payment initiation failed. Please try again.");
     } finally {
       setIsLoading(false);
     }
@@ -223,15 +301,13 @@ function AddressShiping({ cartItems }) {
 
     const interval = setInterval(async () => {
       totalTime += intervalTime;
-
       try {
         setIsLoading(true);
-
         const response = await axios.get(
           `https://api.worldpayme.com/api/v1.1/payinTransactionCheckStatus/${reference}`,
           {
             headers: {
-              Authorization: `Bearer ${token}`,
+              Authorization: `Bearer ${selectedPayment === "upi1" ? token : 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI4IiwianRpIjoiNzE1ZDJlODJiZTYxYzdiYjk1YzZhNDA0ZTdlYTNiZDRjOTNkYWRmNWEzYmJiYmExYmFhNTI2ZGIxNzVkNjhhNmI1YmZjZWU3N2ZmMTgwMDkiLCJpYXQiOjE3NDg1MTgwNTYuMjcyNDQyLCJuYmYiOjE3NDg1MTgwNTYuMjcyNDQ0LCJleHAiOjE3ODAwNTQwNTYuMjY5OTk3LCJzdWIiOiIzMDMiLCJzY29wZXMiOltdfQ.ElJzC40DRfPxMCJn8hKPJwOQqinyzK2yRONmLIky4IElGAeDJzghUbiBQg6uVIe0qMnQZCTY66trEbVh25TJZYpWv_rEyP4LYMhFNtyHOyEothKg-RAWt99y4baqf10wp5Mfl1YdUI3lQaYHKYF1B0y8gJFtLghvj8nxsWdi5a_V7TfkzcGGWy5HtqZnaYyDWxJCSIjm41E2mfJVoDrGz5_DMHCQq50JHN8rJwlx4R6pH4uD-D-xoYZsTgdg94ogkuuyWRpNpHTPx6ku9D6AVqO4gz8pGysphatUaIUeAHciNDNVW_hU3ReHMXUc6GsySmPjoogmRZJqtrtv432N4dhVZYZM8uPH8LmI437xsiT8Pwh8eigfJeiizElf0_sMgeNL7wwfkfsIkjWiNQlai9l0tgXpkSh_B4WHwbGMlhjN-xebvWE3NmiUu8Ut9m-aHyL-TCLX_hbkGepgEBilGiyqPzbpP9oNPXO7t3Js4MxAaFQjP4M2hHyHfxMPUUCbUEboS2cdL9uQpag_X9Z7w9cQMTaC6bFjv-RuAJhwGvSMHvs3paOZqdZxRd4bwybXUyCIisqdG1FHoFgPoz5tA5bYZ8CpILbYGuxPHeCpN51c0_QhOfGcEUT5st7PUadqwiQG1WJBOQ6XHquUNAt9ZySDpB9DjLtQ4jxjQbyer6I'}`,
               "Content-Type": "application/json",
             },
           }
@@ -264,14 +340,13 @@ function AddressShiping({ cartItems }) {
 
   useEffect(() => {
     if (!startTimer || timeLeft <= 0) return;
-  
+
     const timer = setInterval(() => {
       setTimeLeft((prev) => prev - 1);
     }, 1000);
-  
+
     return () => clearInterval(timer);
   }, [startTimer, timeLeft]);
-  
 
   // Format time for display: MM:SS
   const formatTime = (seconds: number) => {
@@ -600,15 +675,15 @@ function AddressShiping({ cartItems }) {
                     <input
                       type="radio"
                       name="payment"
-                      value="phonepe"
-                      checked={selectedPayment === "phonepe"}
+                      value="upi1"
+                      checked={selectedPayment === "upi1"}
                       onChange={(e) => setSelectedPayment(e.target.value)}
                       className="h-4 w-4 text-blue-600 focus:ring-blue-500"
                     />
                     <div className="ml-3">
-                      <span className="block font-medium">PhonePe</span>
+                      <span className="block font-medium">Payment UPI 1</span>
                       <span className="text-gray-500 text-sm">
-                        Pay online via PhonePe
+                        Pay using UPI Gateway 1
                       </span>
                     </div>
                   </label>
@@ -617,22 +692,21 @@ function AddressShiping({ cartItems }) {
                     <input
                       type="radio"
                       name="payment"
-                      value="cod"
-                      checked={selectedPayment === "cod"}
+                      value="upi2"
+                      checked={selectedPayment === "upi2"}
                       onChange={(e) => setSelectedPayment(e.target.value)}
                       className="h-4 w-4 text-blue-600 focus:ring-blue-500"
                     />
                     <div className="ml-3">
-                      <span className="block font-medium">
-                        Cash on Delivery
-                      </span>
+                      <span className="block font-medium">Payment UPI 2</span>
                       <span className="text-gray-500 text-sm">
-                        Pay when you receive the order
+                        Pay using UPI Gateway 2
                       </span>
                     </div>
                   </label>
                 </div>
               </div>
+
               {/* Order Notes */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
