@@ -164,8 +164,8 @@ const CancellationPolicy = () => {
               info@digihub.com
               </a>
                 and call us at 
-              <a className="text-blue-600 ps-1" href="tel:= (+91)72970 26119">
-              (+91) 72970 26119
+              <a className="text-blue-600 ps-1" href="tel:=01414511098">
+              01414511098
               </a>
               .
             </p>
