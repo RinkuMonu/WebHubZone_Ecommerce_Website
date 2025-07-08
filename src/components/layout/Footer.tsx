@@ -60,7 +60,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>PLOT NO 97, DAKSHINPURI-I, SHRIKISHANPURA, SANGANER,</li>
               <li>Jagatpura, Jaipur, Jaipur- 302017,Rajasthan</li>
-              <li>Phone: +9172970 26119</li>
+              <li>Phone: 01414511098</li>
               <li>Email: info@digihub.com</li>
             </ul>
           </div>
