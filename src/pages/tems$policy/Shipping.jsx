@@ -35,7 +35,7 @@ const Shipping = () => {
               <strong>Introduction</strong>
             </h3>
             <p>
-              Welcome to DIGIHUB UNIQUE TECH SOLUTIONS PRIVATE LIMITED Services
+              Welcome to WEBHUB ZONE NETWORK PRIVATE LIMITED Services
               By signing the Service Form  and handing over your product(s) for service, you agree to
               abide by these Terms and Conditions. These terms govern the
               service and repair of your product(s) by Digital Services Centers

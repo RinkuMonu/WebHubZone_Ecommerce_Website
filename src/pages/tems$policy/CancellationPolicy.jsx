@@ -21,8 +21,7 @@ const CancellationPolicy = () => {
           <div className="ck-content">
             <h3 className="section-heading">
               <strong>
-                Cancellation Policy for Digihub Unique Tech Solutions Private
-                Limited. Pvt Ltd
+                Cancellation Policy for WEBHUB ZONE NETWORK PRIVATE LIMITED
               </strong>
             </h3>
             <p>Last updated: Feb, 20, 2024</p>
@@ -160,8 +159,8 @@ const CancellationPolicy = () => {
             <p>
               If you have any questions about this Privacy Policy, You can
               contact us via email at{" "}
-              <a className="text-blue-600 pe-1" href="mailto:iinfo@webhub.net.in">
-              iinfo@webhub.net.in
+              <a className="text-blue-600 pe-1" href="mailto:info@webhub.net.in.">
+              info@webhub.net.in.
               </a>
                 and call us at
               <a className="text-blue-600 ps-1" href="tel:=9653723339">

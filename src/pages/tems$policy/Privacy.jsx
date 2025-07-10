@@ -22,7 +22,7 @@ const Privacy = () => {
       <section className="tp-page-area pb-80 pt-50">
         <div className="container">
           <div className="ck-content">
-            <h3 className="section-heading"><strong>Privacy Policy for DIGIHUB UNIQUE TECH SOLUTIONS PRIVATE LIMITED</strong></h3>
+            <h3 className="section-heading"><strong>Privacy Policy for WEBHUB ZONE NETWORK PRIVATE LIMITED</strong></h3>
             <p>Last updated: Feb, 20, 2024</p>
 
             <h3 className="section-heading"><strong>Introduction</strong></h3>
@@ -36,7 +36,7 @@ const Privacy = () => {
             <h3 className="section-heading"><strong>Definitions</strong></h3>
             <p><b>Account:</b> Means a unique account created for You to access our Service.</p>
             <p><b>Affiliate:</b> Means an entity that controls, is controlled by, or is under common control with a party.</p>
-            <p><b>Company:</b> Refers to U62013RJ2024PTC093387, Plot No 97, Dakshinpuri - I, Shrikishan, Sanganer, Jagatpura, Jaipur Rajasthan, India, 302017.</p>
+            <p><b>Company:</b> Refers to U62013RJ2024PTC093387, Flat No. 202 , Plot no. C-10, Sector-9, Chirakoot nagar, Vaishali Nagar ,Jaipur ,Rajasthan, 302021 </p>
             <p><b>Cookies:</b> Small files placed on Your device to store details of your browsing history.</p>
             <p><b>Device:</b> Refers to any device that can access the Service such as a computer, cellphone, or tablet.</p>
             <p><b>Personal Data:</b> Any information that relates to an identified or identifiable individual.</p>
@@ -88,7 +88,7 @@ const Privacy = () => {
             <p>We may update our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
 
             <h3 className="section-heading"><strong>Contact Us</strong></h3>
-            <p>If you have any questions about this Privacy Policy, You can contact us via email at <a href="mailto:Finunique Small Pvt Ltdnew@gmail.com">iinfo@webhub.net.in</a>.</p>
+            <p>If you have any questions about this Privacy Policy, You can contact us via email at <a href="mailto:Finunique Small Pvt Ltdnew@gmail.com">info@webhub.net.in.</a></p>
           </div>
         </div>
       </section>

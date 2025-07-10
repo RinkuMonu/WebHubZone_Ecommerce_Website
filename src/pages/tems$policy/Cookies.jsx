@@ -22,7 +22,7 @@ const Cookies = () => {
       <section className="tp-page-area pb-80 pt-50">
         <div className="container">
           <div className="ck-content">
-            <h1 className="section-heading"><strong>Cookie Policy for DIGIHUB UNIQUE TECH SOLUTIONS PRIVATE LIMITED Pvt Ltd</strong></h1>
+            <h1 className="section-heading"><strong>Cookie Policy for WEBHUB ZONE NETWORK PRIVATE LIMITED Pvt Ltd</strong></h1>
             <p>Last updated: Feb, 20, 2024</p>
 
             <h3 className="section-heading"><strong>What Are Cookies</strong></h3>
@@ -76,7 +76,7 @@ const Cookies = () => {
             <p>For more general information on cookies, please read the <a href="https://www.cookiespolicy.com">Cookies Policy</a>.</p>
             <p>If you still have questions, you can contact us using the following contact methods:</p>
             <ul className="terms-list">
-              <li>Email: <a href="mailto:Info@Finunique Small Pvt Ltd.in">Info@digihubtech.in</a></li>
+              <li>Email: <a href="mailto:Info@Finunique Small Pvt Ltd.in">info@webhub.net.in</a></li>
             </ul>
           </div>
         </div>
