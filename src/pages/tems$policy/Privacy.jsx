@@ -36,7 +36,7 @@ const Privacy = () => {
             <h3 className="section-heading"><strong>Definitions</strong></h3>
             <p><b>Account:</b> Means a unique account created for You to access our Service.</p>
             <p><b>Affiliate:</b> Means an entity that controls, is controlled by, or is under common control with a party.</p>
-            <p><b>Company:</b> Refers to U62013RJ2024PTC093387, Flat No. 202 , Plot no. C-10, Sector-9, Chirakoot nagar, Vaishali Nagar ,Jaipur ,Rajasthan, 302021 </p>
+            <p><b>Company:</b> Refers to 08AACCW9378C1ZZ, Flat No. 202 , Plot no. C-10, Sector-9, Chirakoot nagar, Vaishali Nagar ,Jaipur ,Rajasthan, 302021 </p>
             <p><b>Cookies:</b> Small files placed on Your device to store details of your browsing history.</p>
             <p><b>Device:</b> Refers to any device that can access the Service such as a computer, cellphone, or tablet.</p>
             <p><b>Personal Data:</b> Any information that relates to an identified or identifiable individual.</p>

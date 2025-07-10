@@ -41,7 +41,7 @@ const Refund = () => {
                 Any Product purchased from the Website can be returned to the
                 Company within Ten (10) days of delivery by placing a Cancel
                 Order request by logging a call with the Company’s Customer Care
-                Centre at 9660339514 (Mon to Sat-10AM to 6PM).
+                Centre at 9653723339 (Mon to Sat-10AM to 6PM).
               </li>
               <li>
                 Any Product purchased from the Website can be returned only if
