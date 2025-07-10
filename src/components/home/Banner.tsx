@@ -26,7 +26,7 @@ const Banner: React.FC = () => {
           disableOnInteraction: false,
         }}
         modules={[Pagination, Navigation, Autoplay]}
-        className="mySwiper w-full bg-gradient-to-r from-[#5252a2] to-[#5252a2]"
+        className="mySwiper w-full bg-gradient-to-r from-[#214b87] to-[#214b87]"
       >
         
         <SwiperSlide>

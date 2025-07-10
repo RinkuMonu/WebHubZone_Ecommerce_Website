@@ -11,7 +11,7 @@ const CancellationPolicy = () => {
         <div className="container">
           <div className="breadcrumb__content p-relative z-index-1">
             <h3 className="breadcrumb__title">Cancellation Policy</h3>
-            
+
           </div>
         </div>
       </section>
@@ -160,12 +160,12 @@ const CancellationPolicy = () => {
             <p>
               If you have any questions about this Privacy Policy, You can
               contact us via email at{" "}
-              <a className="text-blue-600 pe-1" href="mailto:info@digihub.com">
-              info@digihub.com
+              <a className="text-blue-600 pe-1" href="mailto:iinfo@webhub.net.in">
+              iinfo@webhub.net.in
               </a>
-                and call us at 
-              <a className="text-blue-600 ps-1" href="tel:=01414511098">
-              01414511098
+                and call us at
+              <a className="text-blue-600 ps-1" href="tel:=9653723339">
+              9653723339
               </a>
               .
             </p>

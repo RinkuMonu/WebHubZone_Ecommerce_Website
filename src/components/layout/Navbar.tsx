@@ -96,13 +96,13 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick, cartItemCount }) => {
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       required
-                      style={{ border: "2px solid rgb(82, 82, 162)" }}
+                      style={{ border: "2px solid #214b87" }}
                     />
                     <button
                       type="submit"
                       className="absolute top-0 right-0   text-white"
                       style={{
-                        backgroundColor: "rgb(82, 82, 162)",
+                        backgroundColor: "#214b87",
                         height: "100%",
                         width: "12%",
                         display: "flex",
@@ -136,7 +136,7 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick, cartItemCount }) => {
                             <p className="text-sm text-gray-600">
                               Hello, Guest
                             </p>
-                            <a href="/login" className="text-blue-500 text-sm">
+                            <a href="/login" className=" text-sm" style={{color:"#214b87"}}>
                               Login / Register
                             </a>
                           </div>
@@ -183,7 +183,7 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick, cartItemCount }) => {
                           d="M21.435 4.318a5.5 5.5 0 00-7.77 0L12 5.983l-1.665-1.665a5.5 5.5 0 10-7.77 7.77l1.665 1.665L12 20.017l7.77-7.77 1.665-1.665a5.5 5.5 0 000-7.77z"
                         />
                       </svg>
-                      <span className="absolute -top-2 -right-2 bg-[#5252a2] text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                      <span className="absolute -top-2 -right-2 bg-[#214b87] text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                         {/* {wishlistCount} */}
                         {cartItemCount}
                       </span>
@@ -251,13 +251,13 @@ const Navbar: React.FC<NavbarProps> = ({ onCartClick, cartItemCount }) => {
                   className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
                   placeholder="Search Category"
                   required
-                  style={{ border: "2px solid rgb(82, 82, 162)" }}
+                  style={{ border: "2px solid #214b87" }}
                 />
                 <button
                   type="submit"
                   className="absolute  top-0 right-0   text-white "
                   style={{
-                    backgroundColor: "rgb(82, 82, 162)",
+                    backgroundColor: "#214b87",
                     height: "100%",
                     width: "17%",
                     display: "flex",

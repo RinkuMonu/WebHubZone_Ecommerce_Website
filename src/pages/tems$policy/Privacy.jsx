@@ -88,7 +88,7 @@ const Privacy = () => {
             <p>We may update our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
 
             <h3 className="section-heading"><strong>Contact Us</strong></h3>
-            <p>If you have any questions about this Privacy Policy, You can contact us via email at <a href="mailto:Finunique Small Pvt Ltdnew@gmail.com">info@digihub.com</a>.</p>
+            <p>If you have any questions about this Privacy Policy, You can contact us via email at <a href="mailto:Finunique Small Pvt Ltdnew@gmail.com">iinfo@webhub.net.in</a>.</p>
           </div>
         </div>
       </section>

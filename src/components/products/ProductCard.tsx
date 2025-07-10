@@ -31,7 +31,7 @@ export default function ProductCard({ product, addToCart }: ProductCardProps) {
           <p className="text-lg font-bold text-gray-900">₹{product.price}</p>
           <button
             onClick={() => addToCart(product)}
-            className="w-full flex items-center justify-center space-x-2 bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition"
+            className="w-full flex items-center justify-center space-x-2  text-white py-2 rounded-lg" style={{backgroundColor:"#214b87"}}
           >
             <ShoppingCart className="h-5 w-5" />
             <span>Add to Cart</span>

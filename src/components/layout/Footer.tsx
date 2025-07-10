@@ -58,16 +58,16 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2">
-              <li>PLOT NO 97, DAKSHINPURI-I, SHRIKISHANPURA, SANGANER,</li>
-              <li>Jagatpura, Jaipur, Jaipur- 302017,Rajasthan</li>
-              <li>Phone: 01414511098</li>
-              <li>Email: info@digihub.com</li>
+              <li>Flat No. 202 , Plot no. C-10, Sector-9, Chirakoot nagar, Vaishali Nagar </li>
+              <li>Jaipur ,Rajasthan, 302021</li>
+              <li>Phone: 9653723339</li>
+              <li>Email: info@webhub.net.in</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p>&copy; {new Date().getFullYear()} DIGIHUB UNIQUE TECH SOLUTIONS PRIVATE LIMITED. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} WEBHUB ZONE NETWORK PRIVATE LIMITED All rights reserved.</p>
         </div>
       </div>
     </footer>
