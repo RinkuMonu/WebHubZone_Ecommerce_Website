@@ -127,50 +127,12 @@ const ProductDetails = ({ addToCart }: ProductDetailsProps) => {
           {/* Modal body */}
           <div className="p-4">
             <ul className="text-base text-gray-500 list-disc">
-              <li className="py-2">Operating System: Windows 11 Home</li>
-              <li className="py-2">Processor: Intel® Celeron® N4500</li>
+              <li className="py-2"> {product.name}</li>
+              <li className="py-2">{product.brand}</li>
               <li className="py-2">
-                Size: 14.0 inches
-                ASUS Global
-                +3
-                ASUS Global
-                +3
-                LaptopMag
-                +3
-
-                Resolution: Full HD (1920 x 1080)
-                LaptopMedia
-                +1
-                ASUS Global
-                +1
-
-                Aspect Ratio: 16:9
-
-                Refresh Rate: 60Hz
-                ASUS Global
-                +1
-                ASUS Global
-                +1
-
-                Brightness: 250 nits
-                LaptopMedia
-                +3
-                ASUS Global
-                +3
-                ASUS Global
-                +3
-
-                Color Gamut: 45% NTSC
-                ASUS Global
-                +3
-                ASUS Global
-                +3
-                ASUS Global
-                +3
-
-                Screen-to-Body Ratio: 83%
+           {product.description}
               </li>
-              <li className="py-2">Graphics: Intel UHD Graphics</li>
+             
             </ul>
 
             <div className="flex items-center justify-between py-6">
@@ -228,9 +190,9 @@ const ProductDetails = ({ addToCart }: ProductDetailsProps) => {
               </div>
               {/* SKU and Category */}
               <div className="text-base py-6">
-                <p className="text-black">SKU: SF-2443-CGOF</p>
+                <p className="text-black">{product.brand}o</p>
                 <p className="text-black">
-                  Category: <span className="text-gray-600">Laptop</span>
+                  Category: <span className="text-gray-600">{product.category}</span>
                 </p>
               </div>
 
@@ -299,17 +261,12 @@ const ProductDetails = ({ addToCart }: ProductDetailsProps) => {
         {activeTab === "description" && (
           <div className="text-sm font-normal leading-6 mb-4 text-[#55585b] p-8">
             <p className="leading-6 mb-4">
-              Acer Aspire 3 Intel Core Celeron N4500 Processor Laptop
-              (Windows 11 Home/ 8 GB/ 256 GB SSD) A324-45 with 35.56 cm (14") TN
-              HD Display, Pure Silver, 1.3 KG
+             {product.description}
             </p>
             <ul className="mt-2 list-disc list-inside">
-              <li className="leading-6 mb-4">Operating System: Windows 11 Home</li>
-              <li className="leading-6 mb-4">Processor: Intel Core Celeron N4500</li>
-              <li className="leading-6 mb-4">Display: 35.6 cm (14") Display with TN, HD 1366 x 768, Acer ComfyView LED-backlit TFT LCD, 16:9 aspect ratio, Ultra-slim design, Mercury free, environment friendly</li>
-              <li className="leading-6 mb-4">Graphics: Intel UHD Graphics</li>
-              <li className="leading-6 mb-4">Memory: Dual-channel LPDDR4X SDRAM support: 8GB of LPDDR4X onboard system memory</li>
-              <li className="leading-6 mb-4">Storage: 256 GB, PCIe Gen3 8 Gb/s up to 4 lanes, NVMe Support up to 1 TB</li>
+              <li className="leading-6 mb-4"> {product.brand}</li>
+              <li className="leading-6 mb-4"> {product.category}</li>
+            
             </ul>
           </div>
         )}
@@ -324,7 +281,7 @@ const ProductDetails = ({ addToCart }: ProductDetailsProps) => {
           Related Products
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:px-10">
-          {products.slice(0, 4).map((product) => (
+          {products.slice(5, 9).map((product) => (
             <div
               key={product.id}
               className="group grid grid-cols-1 w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow"
@@ -470,20 +427,15 @@ const ProductDetails = ({ addToCart }: ProductDetailsProps) => {
                             <div className="p-4">
                               <ul className="text-base text-gray-500 list-disc">
                                 <li className="py-2">
-                                  Operating System: Windows 11 Home
+                                  {product.name}
                                 </li>
                                 <li className="py-2">
-                                  Processor: Intel Core Celeron N4500
+                                   {product.brand}
                                 </li>
                                 <li className="py-2">
-                                  Display: 35.6 cm (14") Display with TN, HD
-                                  1366 x 768, Acer ComfyView LED-backlit TFT
-                                  LCD, 16:9 aspect ratio, Ultra-slim design,
-                                  Mercury free, environment friendly
+                              {product.description}
                                 </li>
-                                <li className="py-2">
-                                  Graphics: Intel UHD Graphics
-                                </li>
+                              
                               </ul>
 
                               <div className="flex items-center justify-between py-6">

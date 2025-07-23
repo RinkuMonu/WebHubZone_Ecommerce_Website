@@ -126,7 +126,7 @@ function AddressShiping({ cartItems }) {
     address: "",
   });
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI4IiwianRpIjoiYzNhNWRmMzEwODdkYTY4YzUxN2IwZTRjMGU0NGIyNmFmOWM4ODJlOWJiZWYxZDM3NmY5ZjRiOTcxM2VhZWFmYjZkOTgyMjYxMDYwOGI3ODYiLCJpYXQiOjE3NDQ3MTI2OTguMjIxMzYzLCJuYmYiOjE3NDQ3MTI2OTguMjIxMzY2LCJleHAiOjE3NzYyNDg2OTguMjE4NzY3LCJzdWIiOiIyNDkiLCJzY29wZXMiOltdfQ.VWB2ejh3M4HXA3hAO37qbOV1Ylx5wKZ_NK1GQK7PrgY0S6xAnQwE_MwcNn-ln_aPFt5cz_ZzeTmAKkLmQh9oOJbHXRmA8MFG_WcWm6HPZt_F_JqyfKdtmW9rgv27PuNtozLIpzUUTed8RMXh6ci2wjqRFVng-jVrFkb-IHJB2Ivm3OjO8wH4CHXF8yvtQVKnCCg01r3IyLdcB1KtwK6Q_Rta8iNTimKTsGxJ_FnnOjCuYPETuP1dJLVXB9F_EmxZYK59Z_Cc7NWsDn_fMmRB4sJG3TtG9eSlwl_wJ8pIy4ou8uyiedRqSHMPgHva4Pk6OY8g4lGr4gxb3ry4S5ax5aRxTtmBt64xn0Wgg5tYKxHON8A7_t0F0G-aQeWO1CxcYbF2lfU507e9X9NE8TeGzoexuVI2NGiOptJG9oRlTDNEL981hvucdkSfi6DQVG7vrD7DbFs5XvikbxpPz4ooE7JSPzNnLBPPkj7Yl17DIgWCIgSzrVgEsuW5RcuTURLVrtPRv1qX7lgiXtqxf_TrwAaoOaYnTTinZYoQmP-uyPy8krH0Sr42CtjIRYKYBNWJV0jXzgH36RXVoiOxq8w7rmdGqkbCs4CNDoX6FhJa5dSwjz0tn9t0Dt2NMogyHf4zxQDHdptkSN90sXhoAFUdYUlVRfZ7Z8UUSTXOW2j6Fsw";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI4IiwianRpIjoiM2Q2YTBlOWQ1ZmQyMDQ3YzgwOTUwOTgxMDllMjk0NGMwM2ZhNTgzZWI2NmQ1NGZjOGE3MGFmMDdlOTM4ODg5NTE1NjM0NWI0ZDgyN2YzNWQiLCJpYXQiOjE3NTI3NDQzODMuOTA2NzQ4LCJuYmYiOjE3NTI3NDQzODMuOTA2NzUsImV4cCI6MTc4NDI4MDM4My45MDUwMjQsInN1YiI6IjMxNyIsInNjb3BlcyI6W119.uzimkGo0_sYe3sDAS3i9a761RSN3IJxM1lgcbt-gE0ldIvtXCV1VUo_3n5QxJqjwm2CNqXbq5-KqxfJ3XLNHa3ik4AP1JDysKq0lxev7Te0H2l0EuIdP5wKNz3an6MyoSjE5k8NlTYFWXnXvuFCKuueTql0hJd1I8tb0MbM2S2V2RuObroNwKQIE8Ug0aXXT_fhgyLygOy5ZbnHNIDXwezKqnQC8XHr-xdUKsQ4HooIcVRPFPfRgl2MyOHrmXfQyYyiluUtQtaeZJZbu4JX86pyb-8GKbc5UsGV1F50n-12JZLfo5RFSE7VyvvxfVf3lyrUaDjsWcVZ6UD3et_7S3VLRzgypJoQb87dtGTqI0i2G1yEF2VdNBX6kF6ZN8gSfzK9NYSKpmoFGUOoOrFE8FubEEIoFn22lR9ZZDU8XFal4-2VfsHZOm-PXkUtcxv2oo1RQ3oIgc6tX2kDEtGF7YKJMOxkydIQv8v-GLINMKzv_DFnEW0nCeuL7uq5XjtaJaAIdMC4M591JPZ3y4yW4OnQy6bZBIBncKNu005OKa8S2kAcyZ0YJXSO1zmTq5x2FTRIfrJg_JEgnGXbHr9Ib7pIx6jIZ_r7UdeVUQOkJHtRXy21FG1DlselsYzBE0VzAHsReP3ITh5_EE_LoDVjY94dNzBx-IdrpjOSnbnNWyAw";
 
   const shipping =
     shippingMethods.find((m) => m.id === selectedShipping)?.price || 0;
@@ -134,7 +134,7 @@ function AddressShiping({ cartItems }) {
 
   const data = {
     name: userdata.name,
-    amount: total,
+    amount: 1,
     number: userdata.phone,
     MUID: "MUID" + Date.now(),
     transactionId: "T" + Date.now(),
@@ -224,7 +224,7 @@ function AddressShiping({ cartItems }) {
              myip: "666666",
           },
           headers: {
-            Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI4IiwianRpIjoiNzE1ZDJlODJiZTYxYzdiYjk1YzZhNDA0ZTdlYTNiZDRjOTNkYWRmNWEzYmJiYmExYmFhNTI2ZGIxNzVkNjhhNmI1YmZjZWU3N2ZmMTgwMDkiLCJpYXQiOjE3NDg1MTgwNTYuMjcyNDQyLCJuYmYiOjE3NDg1MTgwNTYuMjcyNDQ0LCJleHAiOjE3ODAwNTQwNTYuMjY5OTk3LCJzdWIiOiIzMDMiLCJzY29wZXMiOltdfQ.ElJzC40DRfPxMCJn8hKPJwOQqinyzK2yRONmLIky4IElGAeDJzghUbiBQg6uVIe0qMnQZCTY66trEbVh25TJZYpWv_rEyP4LYMhFNtyHOyEothKg-RAWt99y4baqf10wp5Mfl1YdUI3lQaYHKYF1B0y8gJFtLghvj8nxsWdi5a_V7TfkzcGGWy5HtqZnaYyDWxJCSIjm41E2mfJVoDrGz5_DMHCQq50JHN8rJwlx4R6pH4uD-D-xoYZsTgdg94ogkuuyWRpNpHTPx6ku9D6AVqO4gz8pGysphatUaIUeAHciNDNVW_hU3ReHMXUc6GsySmPjoogmRZJqtrtv432N4dhVZYZM8uPH8LmI437xsiT8Pwh8eigfJeiizElf0_sMgeNL7wwfkfsIkjWiNQlai9l0tgXpkSh_B4WHwbGMlhjN-xebvWE3NmiUu8Ut9m-aHyL-TCLX_hbkGepgEBilGiyqPzbpP9oNPXO7t3Js4MxAaFQjP4M2hHyHfxMPUUCbUEboS2cdL9uQpag_X9Z7w9cQMTaC6bFjv-RuAJhwGvSMHvs3paOZqdZxRd4bwybXUyCIisqdG1FHoFgPoz5tA5bYZ8CpILbYGuxPHeCpN51c0_QhOfGcEUT5st7PUadqwiQG1WJBOQ6XHquUNAt9ZySDpB9DjLtQ4jxjQbyer6I`, // 🆕 your token
+            Authorization: `Bearer .yer6I`, // 🆕 your token
             "Content-Type": "application/json",
           },
           extractIntent: (res) => res.data?.data?.upiIntent || res.data?.upiUrl,

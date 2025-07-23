@@ -8,6 +8,7 @@ export const products = [
     category: "Computer and Peripherals",
     brand: "HP",
     date: "2024-04-18",
+    description: "Wireless optical mouse with 2.4GHz connectivity, 1600 DPI precision tracking, ergonomic design for comfortable grip, 3-button configuration with scroll wheel, battery life up to 12 months, plug-and-play USB receiver, compatible with Windows and Mac OS"
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const products = [
     category: "Projector",
     brand: "LG",
     date: "2024-07-19",
+    description: "Desktop computer unit with Intel Core processor, 8GB DDR4 RAM, 256GB SSD storage, integrated graphics, multiple USB 3.0 ports, HDMI output, Ethernet connectivity, pre-installed Windows 11, compact tower design, energy efficient operation"
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const products = [
     category: "Cameras",
     brand: "CROMA",
     date: "2024-09-20",
+    description: "Over-ear wireless headphones with active noise cancellation, 40mm dynamic drivers, frequency response 20Hz-20kHz, Bluetooth 5.0 connectivity, 30-hour battery life, quick charge feature, built-in microphone, foldable design with carrying case"
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ export const products = [
     category: "Smartwatch",
     brand: "RealMe",
     date: "2024-10-20",
+    description: "1.4-inch AMOLED display with 454x454 resolution, GPS tracking, heart rate monitor, SpO2 sensor, 100+ workout modes, 5ATM water resistance, 12-day battery life, Bluetooth calling, music control, sleep tracking, IP68 rating"
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ export const products = [
     category: "Tech Gadgets",
     brand: "Sony",
     date: "2024-11-11",
+    description: "Wireless neckband earphones with active noise cancellation, 12mm dynamic drivers, Bluetooth 5.0, 20-hour battery life, quick charge 10 minutes for 60 minutes playback, magnetic earbuds, voice assistant support, IPX4 sweat resistance"
   },
   {
     id: 6,
@@ -58,6 +63,7 @@ export const products = [
     category: "Smartwatch",
     brand: "Samsung",
     date: "2024-03-26",
+    description: "1.2-inch Super AMOLED display, Tizen OS, GPS + LTE connectivity, heart rate monitoring, sleep tracking, 40mm case size, rotating bezel navigation, 4GB storage, Samsung Pay support, water resistant up to 50m, 4-day battery life"
   },
   {
     id: 7,
@@ -68,6 +74,7 @@ export const products = [
     category: "Tech Gadgets",
     brand: "RealMe",
     date: "2024-04-05",
+    description: "1.3-inch TFT color display, fitness tracking with 14 sports modes, heart rate and blood oxygen monitoring, 7-day battery life, IP68 water resistance, smartphone notifications, music control, customizable watch faces, silicone strap"
   },
   {
     id: 8,
@@ -78,6 +85,7 @@ export const products = [
     category: "Tech Gadgets",
     brand: "RealMe",
     date: "2024-07-10",
+    description: "Gaming console with 4K HDR gaming support, 825GB SSD storage, AMD Zen 2 processor, ray tracing technology, 3D audio, DualSense wireless controller, backward compatibility, ultra-high speed SSD, tempest 3D AudioTech, refurbished with warranty"
   },
   {
     id: 9,
@@ -88,6 +96,7 @@ export const products = [
     category: "Tech Gadgets",
     brand: "LG",
     date: "2024-07-17",
+    description: "Ergonomic wireless mouse with 2400 DPI optical sensor, 6-button configuration, programmable buttons, 2.4GHz wireless connectivity, nano USB receiver, 18-month battery life, compatible with Windows, Mac, and Linux systems, ambidextrous design"
   },
   {
     id: 10,
@@ -98,6 +107,7 @@ export const products = [
     category: "Tech Gadgets",
     brand: "Redragon",
     date: "2024-01-18",
+    description: "Large gaming mouse pad 800x400x3mm, high-quality cloth surface for smooth tracking, anti-slip rubber base, stitched edges for durability, water-resistant coating, optimized for both optical and laser mice, RGB lighting compatible design"
   },
   {
     id: 11,
@@ -108,6 +118,7 @@ export const products = [
     category: "Tech Gadgets",
     brand: "HP",
     date: "2024-09-22",
+    description: "Full-size wireless keyboard with 2.4GHz connectivity, low-profile keys for comfortable typing, 12 function keys, numeric keypad, spill-resistant design, 36-month battery life, plug-and-play USB receiver, Windows and Mac compatible"
   },
   {
     id: 12,
@@ -118,6 +129,7 @@ export const products = [
     category: "Tech Gadgets",
     brand: "Sony",
     date: "2024-04-29",
+    description: "Mechanical gaming keyboard with RGB backlighting, Cherry MX switches, anti-ghosting technology, programmable macro keys, aluminum frame construction, detachable wrist rest, USB passthrough, dedicated media controls, customizable lighting effects"
   },
   {
     id: 13,
@@ -128,26 +140,29 @@ export const products = [
     category: "Tech Gadgets",
     brand: "Fossil",
     date: "2024-10-16",
+    description: "Wear OS smartwatch with 1.28-inch AMOLED display, Snapdragon Wear 4100+ processor, GPS tracking, heart rate monitor, NFC payments, Google Assistant, customizable dials, 24-hour battery life, swim-proof design, leather strap"
   },
   {
     id: 14,
-    name: "Refurbished  VIVO Tab",
+    name: "Refurbished VIVO Tab",
     price: 2990,
     rating: 4.5,
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmumS4UfSADmA3rX87uiEORcj-qY6IGWNXQQ&s",
     category: "Tech Gadgets",
     brand: "VIVO",
     date: "2024-03-15",
+    description: "10.1-inch Android tablet with Full HD IPS display, octa-core processor, 4GB RAM, 64GB storage, dual cameras, Wi-Fi and 4G LTE connectivity, 7000mAh battery, lightweight aluminum body, refurbished with 6-month warranty"
   },
   {
     id: 15,
-    name: "USB 2.0 Extension Cable ",
+    name: "USB 2.0 Extension Cable",
     price: 800,
     rating: 4.6,
     image: "https://dispatchotechnology.co.in/admin/image/700x700%20(5).jpeg",
     category: "Tech Gadgets",
     brand: "Cable Creation",
     date: "2024-02-28",
+    description: "15-meter USB 2.0 extension cable Type A male to female, high-speed data transfer up to 480Mbps, gold-plated connectors for corrosion resistance, durable PVC jacket, plug-and-play compatibility, supports USB 1.1 and 2.0 devices"
   },
   {
     id: 16,
@@ -158,6 +173,7 @@ export const products = [
     category: "Tech Gadgets",
     brand: "Wacom Intuos",
     date: "2024-03-05",
+    description: "Small creative pen tablet with 6x3.7-inch active area, 4096 pressure levels, battery-free pen, Bluetooth and USB connectivity, compatible with Windows and Mac, includes creative software bundle, compact and portable design"
   },
   {
     id: 17,
@@ -168,6 +184,7 @@ export const products = [
     category: "Tech Gadgets",
     brand: "Apple",
     date: "2024-02-28",
+    description: "Digital stylus for iPad with pixel-perfect precision, tilt and pressure sensitivity, lightning-fast responsiveness, attaches magnetically to iPad, wireless charging, compatible with iPad Pro, Air, and mini models, refurbished condition"
   },
   {
     id: 18,
@@ -178,36 +195,40 @@ export const products = [
     category: "Tech Gadgets",
     brand: "Samsung",
     date: "2024-03-12",
+    description: "Wireless gaming controller with haptic feedback, adaptive triggers, built-in microphone, motion controls, USB-C charging, 3.5mm headphone jack, touchpad, light bar, compatible with PS5 and PC, refurbished with warranty"
   },
   {
     id: 19,
-    name: 'Refurbished - cimetech Keyboard ',
+    name: "Refurbished - cimetech Keyboard",
     price: 4990,
     rating: 4.7,
     image: "https://dispatchotechnology.co.in/admin/image/F3.jpg",
     category: "Tech Gadgets",
     brand: "cimetech",
     date: "2024-02-28",
+    description: "Mechanical gaming keyboard with RGB backlighting, blue switches, anti-ghosting, programmable keys, aluminum construction, detachable cable, Windows key lock, multimedia controls, refurbished with 3-month warranty"
   },
   {
     id: 20,
-    name: 'MAYUMI SPACIO Hi Speed',
+    name: "MAYUMI SPACIO Hi Speed",
     price: 2000,
     rating: 4.6,
     image: "https://dispatchotechnology.co.in/admin/image/I1.jpg",
     category: "Tech Gadgets",
     brand: "Mayumi",
     date: "2024-03-01",
+    description: "High-speed USB 3.0 flash drive with 64GB storage capacity, read speeds up to 150MB/s, write speeds up to 60MB/s, compact metal design, keychain attachment, plug-and-play compatibility, password protection software included"
   },
   {
     id: 21,
-    name: 'Boat Headphones',
+    name: "Boat Headphones",
     price: 1990,
     rating: 4.9,
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0tEQq17k5TPpCXJhhBvr3HN8IvadwQ-Jw0g&s",
     category: "Computer and Peripherals",
     brand: "Boat",
     date: "2024-02-28",
+    description: "Wireless over-ear headphones with 40mm dynamic drivers, Bluetooth 5.0, 25-hour battery life, fast charging, built-in microphone, foldable design, soft padded ear cushions, bass-heavy sound signature, voice assistant support"
   },
   {
     id: 22,
@@ -218,16 +239,18 @@ export const products = [
     category: "Computer and Peripherals",
     brand: "CANON",
     date: "2024-03-15",
+    description: "All-in-one inkjet printer with print, scan, copy functions, wireless connectivity, mobile printing support, automatic document feeder, duplex printing, 4800x1200 dpi resolution, refurbished with 6-month warranty, ink cartridges included"
   },
   {
     id: 23,
-    name: "Refurbished  HP Printer",
+    name: "Refurbished HP Printer",
     price: 2990,
     rating: 4.7,
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbu6qs5C_ogiCLTL-60PjDzt_AvAOuCXVc5A&s",
     category: "Computer and Peripherals",
     brand: "HP",
     date: "2024-03-10",
+    description: "Multifunction laser printer with print, scan, copy, fax capabilities, 22 ppm print speed, 1200x1200 dpi resolution, automatic duplex printing, 250-sheet paper tray, USB and Ethernet connectivity, refurbished condition"
   },
   {
     id: 24,
@@ -238,6 +261,7 @@ export const products = [
     category: "Computer and Peripherals",
     brand: "Logitech",
     date: "2024-02-25",
+    description: "Flight simulation joystick with twist rudder control, 12 programmable buttons, 8-way hat switch, throttle control, precision gimbal, USB connectivity, compatible with flight simulator games, adjustable resistance"
   },
   {
     id: 25,
@@ -248,6 +272,7 @@ export const products = [
     category: "Computer and Peripherals",
     brand: "LG",
     date: "2024-03-01",
+    description: "Gaming controller with dual analog sticks, D-pad, 10 action buttons, vibration feedback, USB wired connection, ergonomic design, compatible with PC games, plug-and-play setup, 6-foot cable length"
   },
   {
     id: 26,
@@ -258,6 +283,7 @@ export const products = [
     category: "Computer and Peripherals",
     brand: "LG",
     date: "2024-02-28",
+    description: "Desktop computer with Intel Core i3 processor, 4GB DDR3 RAM, 500GB HDD storage, integrated graphics, DVD drive, multiple USB ports, VGA and HDMI outputs, Windows 10 pre-installed, refurbished with warranty"
   },
   {
     id: 27,
@@ -268,6 +294,7 @@ export const products = [
     category: "Computer and Peripherals",
     brand: "Lenevo",
     date: "2024-02-28",
+    description: "Business desktop computer with Intel Core i5 processor, 8GB DDR4 RAM, 1TB HDD + 128GB SSD, dedicated graphics card, Wi-Fi connectivity, multiple display outputs, Windows 11 Pro, refurbished with 1-year warranty"
   },
   {
     id: 28,
@@ -278,16 +305,18 @@ export const products = [
     category: "Computer and Peripherals",
     brand: "Powerex",
     date: "2024-03-12",
+    description: "Rechargeable wireless mouse with 3200 DPI optical sensor, 7 programmable buttons, RGB lighting, 2.4GHz wireless connection, built-in lithium battery, USB-C charging, gaming-grade precision, ergonomic grip design"
   },
   {
     id: 29,
-    name: " Ant Plus Dracula 11 Aluminum Foldable Laptop",
+    name: "Ant Plus Dracula 11 Aluminum Foldable Laptop",
     price: 990,
     rating: 4.7,
     image: "https://dispatchotechnology.co.in/admin/image/6108i+qDg3L._AC_UY327_FMwebp_QL65_.webp",
     category: "Computer and Peripherals",
     brand: "Lenevo",
     date: "2024-02-28",
+    description: "Portable laptop stand made from aluminum alloy, foldable design for easy storage, adjustable height and angle, heat dissipation design, non-slip silicone pads, supports laptops up to 17 inches, lightweight and durable construction"
   },
   {
     id: 30,
@@ -298,6 +327,7 @@ export const products = [
     category: "Computer and Peripherals",
     brand: "Lapecare",
     date: "2024-03-01",
+    description: "Compact wireless keyboard with 2.4GHz connectivity, 78-key layout, low-profile keys, nano USB receiver, 12-month battery life, spill-resistant design, compatible with Windows, Mac, and Android devices"
   },
   {
     id: 31,
@@ -308,6 +338,7 @@ export const products = [
     category: "Computer and Peripherals",
     brand: "Powerex",
     date: "2024-03-05",
+    description: "Wired gaming controller with dual vibration motors, 12 programmable buttons, dual analog sticks, precision D-pad, turbo function, 6-foot braided cable, compatible with PC and gaming consoles, ergonomic design"
   },
   {
     id: 32,
@@ -318,6 +349,7 @@ export const products = [
     category: "Cellular Gadgets",
     brand: "VGA",
     date: "2024-02-28",
+    description: "6-foot VGA cable with male connectors on both ends, supports resolutions up to 1920x1080, gold-plated connectors, double shielding for interference protection, compatible with monitors, projectors, and computers, durable PVC jacket"
   },
   {
     id: 33,
@@ -328,6 +360,7 @@ export const products = [
     category: "Cellular Gadgets",
     brand: "SONY",
     date: "2024-03-15",
+    description: "Premium wireless headphones with industry-leading noise cancellation, 30mm drivers, LDAC codec support, 30-hour battery life, quick charge feature, touch controls, voice assistant support, foldable design with carrying case"
   },
   {
     id: 34,
@@ -338,6 +371,7 @@ export const products = [
     category: "Cellular Gadgets",
     brand: "OPPO",
     date: "2024-03-10",
+    description: "Long-range USB extension cable with active signal booster, 15-meter length, USB 2.0 compatibility, data transfer speeds up to 480Mbps, plug-and-play installation, compatible with all USB devices, durable construction"
   },
   {
     id: 35,
@@ -348,6 +382,7 @@ export const products = [
     category: "Cellular Gadgets",
     brand: "SONY",
     date: "2024-01-30",
+    description: "Wireless Bluetooth speaker with 360-degree sound, 20-hour battery life, waterproof IPX7 rating, voice assistant support, party connect feature, LED lighting effects, portable design with carrying strap, deep bass technology"
   },
   {
     id: 36,
@@ -358,6 +393,7 @@ export const products = [
     category: "Cellular Gadgets",
     brand: "Sony",
     date: "2024-02-01",
+    description: "Wireless network adapter with 802.11n standard, 300Mbps data rate, dual-band 2.4GHz/5GHz support, WPA/WPA2 security, USB 2.0 interface, compact design, compatible with Windows and Mac, easy setup wizard"
   },
   {
     id: 37,
@@ -368,16 +404,18 @@ export const products = [
     category: "Cellular Gadgets",
     brand: "Real Me",
     date: "2024-02-25",
+    description: "True wireless earbuds with Bluetooth 5.0, 6mm dynamic drivers, 24-hour total battery life, IPX4 water resistance, touch controls, voice assistant support, charging case with LED indicators, comfortable in-ear design"
   },
   {
     id: 38,
-    name: "RGB 354 Mouse Pad ",
+    name: "RGB 354 Mouse Pad",
     price: 1090,
     rating: 4.8,
     image: "https://dispatchotechnology.co.in/admin/image/700x700%20(4).jpeg",
     category: "Cellular Gadgets",
     brand: "OnePlus",
     date: "2024-02-28",
+    description: "Large RGB gaming mouse pad with 14 lighting modes, micro-textured surface, anti-slip rubber base, 800x300x4mm size, USB powered RGB lighting, compatible with gaming software, water-resistant coating, stitched edges"
   },
   {
     id: 39,
@@ -388,6 +426,7 @@ export const products = [
     category: "Cellular Gadgets",
     brand: "Marvik",
     date: "2024-03-05",
+    description: "Premium smartwatch with 1.39-inch AMOLED display, GPS tracking, heart rate monitoring, 100+ workout modes, 7-day battery life, Bluetooth calling, music storage, weather updates, sleep analysis, premium metal construction"
   },
   {
     id: 40,
@@ -398,26 +437,29 @@ export const products = [
     category: "Cellular Gadgets",
     brand: "Lenevo",
     date: "2024-02-28",
+    description: "Mid-tower gaming case with tempered glass side panel, RGB lighting, pre-installed fans, support for ATX/Micro-ATX motherboards, multiple drive bays, cable management system, front I/O ports, tool-free installation"
   },
   {
     id: 41,
     name: "Ant Esports GS150 Stereo Gaming Speaker",
-    price: 500 ,
+    price: 500,
     rating: 4.7,
     image: "https://dispatchotechnology.co.in/admin/image/gs150-1-550x550.jpg",
     category: "Cellular Gadgets",
     brand: "Real Me",
     date: "2024-03-12",
+    description: "Compact stereo gaming speakers with 6W total power output, 3.5mm audio input, USB powered, volume control knob, LED accent lighting, clear audio reproduction, desktop design, compatible with PC, laptop, and mobile devices"
   },
   {
     id: 42,
-    name: "SpinBot Clutch GT900 ",
+    name: "SpinBot Clutch GT900",
     price: 790,
     rating: 4.8,
     image: "https://dispatchotechnology.co.in/admin/image/71B3YY6BviL._AC_UY327_FMwebp_QL65_.webp",
     category: "Cellular Gadgets",
     brand: "XIAOMI",
     date: "2024-02-15",
+    description: "Gaming mouse with 12000 DPI optical sensor, 7 programmable buttons, RGB lighting with 16.8 million colors, ergonomic design, braided cable, gaming-grade switches, customizable weight system, software support for macros"
   },
   {
     id: 43,
@@ -428,6 +470,7 @@ export const products = [
     category: "Cellular Gadgets",
     brand: "Realme",
     date: "2024-02-28",
+    description: "Portable 4G/5G WiFi router with SIM card slot, supports all GSM networks, 150Mbps download speed, connects up to 10 devices, 2000mAh battery, LCD display, WPS security, compact design for travel use"
   },
   {
     id: 44,
@@ -438,6 +481,7 @@ export const products = [
     category: "Cellular Gadgets",
     brand: "Samsung",
     date: "2024-03-01",
+    description: "USB Type-C to USB-A OTG adapter cable, supports data transfer and device connectivity, compatible with smartphones and tablets, plug-and-play functionality, compact design, durable construction, 10cm length"
   },
   {
     id: 45,
@@ -448,16 +492,18 @@ export const products = [
     category: "Accessories",
     brand: "Apple",
     date: "2024-02-28",
+    description: "Pack of 300 Cat6 RJ45 connectors for network cable termination, gold-plated contacts, supports Gigabit Ethernet, compatible with Cat6/Cat5e cables, easy crimping installation, professional grade quality, bulk packaging"
   },
   {
     id: 46,
-    name: "Refurbished -  RealMe Watch Series 8",
+    name: "Refurbished - RealMe Watch Series 8",
     price: 4990,
     rating: 4.8,
     image: "https://m.media-amazon.com/images/I/71Ll7RaekYL._AC_UY327_FMwebp_QL65_.jpg",
     category: "Accessories",
     brand: "RealMe",
     date: "2024-03-05",
+    description: "Advanced smartwatch with 1.91-inch HD display, GPS tracking, health monitoring sensors, 100+ workout modes, 12-day battery life, Bluetooth calling, water resistance, customizable watch faces, refurbished condition with warranty"
   },
   {
     id: 47,
@@ -468,16 +514,18 @@ export const products = [
     category: "Accessories",
     brand: "Samsung",
     date: "2024-02-15",
+    description: "Latest Samsung smartwatch with 1.3-inch Super AMOLED display, Wear OS powered by Samsung, advanced health tracking, GPS, LTE connectivity, Samsung Pay, 40-hour battery life, rotating bezel navigation, premium design"
   },
   {
     id: 48,
-    name: "Refurbished -  Sony WH-1000XM5",
+    name: "Refurbished - Sony WH-1000XM5",
     price: 3990,
     rating: 4.7,
     image: "https://www.theaudiostore.in/cdn/shop/files/SonyMDR-MV1OpenBackHeadphones02_1024x.jpg?v=1703268351",
     category: "Accessories",
     brand: "Sony",
     date: "2024-01-20",
+    description: "Premium noise-canceling headphones with industry-leading ANC, 30mm drivers, 30-hour battery life, multipoint Bluetooth connection, speak-to-chat technology, quick attention mode, refurbished with full warranty"
   },
   {
     id: 49,
@@ -488,6 +536,7 @@ export const products = [
     category: "Accessories",
     brand: "Sony",
     date: "2024-03-10",
+    description: "Latest generation noise-canceling headphones with V1 processor, 8 microphones for superior call quality, 30-hour battery life, quick charge, LDAC codec, multipoint connection, comfortable lightweight design"
   },
   {
     id: 50,
@@ -498,6 +547,7 @@ export const products = [
     category: "Accessories",
     brand: "Logitech",
     date: "2024-02-25",
+    description: "Advanced wireless mouse with 8000 DPI Darkfield sensor, MagSpeed electromagnetic scrolling, 7 customizable buttons, multi-device connectivity, USB-C quick charging, 70-day battery life, ergonomic design"
   },
   {
     id: 51,
@@ -508,6 +558,7 @@ export const products = [
     category: "Accessories",
     brand: "Anker",
     date: "2024-02-28",
+    description: "High-capacity 20000mAh portable charger with PowerIQ technology, dual USB outputs, LED power indicator, compact design, MultiProtect safety system, charges iPhone 12 up to 4 times, compatible with all devices"
   },
   {
     id: 52,
@@ -518,6 +569,7 @@ export const products = [
     category: "Accessories",
     brand: "JBL",
     date: "2024-03-05",
+    description: "Portable Bluetooth speaker with JBL Pro Sound, 12-hour battery life, IP67 waterproof rating, PartyBoost feature, bold design, deep bass, clear highs, wireless streaming, durable fabric and rubber housing"
   },
   {
     id: 53,
@@ -528,6 +580,7 @@ export const products = [
     category: "Accessories",
     brand: "Samsung",
     date: "2024-02-28",
+    description: "Ultra-fast portable SSD with 1TB storage, USB 3.2 Gen 2 interface, read speeds up to 1050MB/s, compact aluminum design, password protection, compatible with PC, Mac, Android, gaming consoles, 3-year warranty"
   },
   {
     id: 54,
@@ -538,6 +591,7 @@ export const products = [
     category: "Accessories",
     brand: "Amazon",
     date: "2024-03-12",
+    description: "Smart speaker with Alexa, improved audio quality, voice control for smart home devices, music streaming, weather updates, timers, alarms, drop-in calling, compact spherical design, multiple color options"
   },
   {
     id: 55,
@@ -548,6 +602,7 @@ export const products = [
     category: "Accessories",
     brand: "Belkin",
     date: "2024-02-28",
+    description: "Wireless charging station for iPhone, Apple Watch, and AirPods, 15W fast charging, MagSafe compatible, LED indicators, foreign object detection, premium design, space-saving solution, includes power adapter"
   },
   {
     id: 56,
@@ -558,6 +613,7 @@ export const products = [
     category: "Accessories",
     brand: "Corsair",
     date: "2024-03-01",
+    description: "Premium mechanical gaming keyboard with Cherry MX switches, per-key RGB backlighting, 6 programmable macro keys, aircraft-grade aluminum frame, dedicated media controls, USB passthrough, iCUE software support"
   },
   {
     id: 57,
@@ -568,6 +624,7 @@ export const products = [
     category: "Speakers",
     brand: "Sony",
     date: "2024-02-28",
+    description: "Portable Bluetooth speaker with EXTRA BASS technology, 24-hour battery life, IP67 waterproof rating, party lights, Party Connect feature, hands-free calling, voice assistant compatible, durable design"
   },
   {
     id: 58,
@@ -578,6 +635,7 @@ export const products = [
     category: "Speakers",
     brand: "JBL",
     date: "2024-03-15",
+    description: "Waterproof portable speaker with JBL Pro Sound, 20-hour battery life, power bank function, IP67 rating, PartyBoost connectivity, bold design, deep bass, wireless Bluetooth streaming, durable construction"
   },
   {
     id: 59,
@@ -588,6 +646,7 @@ export const products = [
     category: "Speakers",
     brand: "Bose",
     date: "2024-03-10",
+    description: "360-degree Bluetooth speaker with True 360 sound, 17-hour battery life, water-resistant design, voice prompts, wireless range up to 30 feet, portable handle, premium materials, clear audio at any volume"
   },
   {
     id: 60,
@@ -598,6 +657,7 @@ export const products = [
     category: "Speakers",
     brand: "Ultimate Ears",
     date: "2024-02-25",
+    description: "360-degree wireless speaker with 20-hour battery life, IP67 waterproof rating, PartyUp feature, Magic Button for playlists, drop-proof design, balanced 360-degree sound, wireless range up to 150 feet"
   },
   {
     id: 61,
@@ -608,6 +668,7 @@ export const products = [
     category: "Speakers",
     brand: "Harman Kardon",
     date: "2024-02-28",
+    description: "Premium wireless speaker with 360-degree sound, ambient lighting, Bluetooth connectivity, elegant dome design, powerful subwoofer, crystal-clear highs, room-filling audio, touch-sensitive controls, premium materials"
   },
   {
     id: 62,
@@ -618,6 +679,7 @@ export const products = [
     category: "Speakers",
     brand: "Marshall",
     date: "2024-03-05",
+    description: "Compact portable speaker with Marshall signature sound, 30+ hour battery life, multi-directional control knob, IP67 water resistance, Stack Mode for multi-speaker setup, iconic Marshall design, True Stereophonic sound"
   },
   {
     id: 63,
@@ -628,6 +690,7 @@ export const products = [
     category: "Speakers",
     brand: "Sony",
     date: "2024-02-28",
+    description: "2.1 channel soundbar with wireless subwoofer, 330W total power, S-Force PRO front surround, HDMI ARC/eARC, Bluetooth connectivity, multiple sound modes, voice enhancement, compact design, easy setup"
   },
   {
     id: 64,
@@ -638,6 +701,7 @@ export const products = [
     category: "Speakers",
     brand: "Bang & Olufsen",
     date: "2024-03-12",
+    description: "Ultra-portable wireless speaker with True360 sound, 27-hour battery life, IP67 dustproof and waterproof, premium aluminum design, Bluetooth 5.2, voice assistant support, carabiner attachment, Danish craftsmanship"
   },
   {
     id: 65,
@@ -648,6 +712,7 @@ export const products = [
     category: "Speakers",
     brand: "Samsung",
     date: "2024-02-28",
+    description: "High-power audio system with 1500W output, bi-directional speakers, LED party lights, karaoke function, Bluetooth connectivity, USB playback, FM radio, guitar input, refurbished with warranty, party-ready design"
   },
   {
     id: 66,
@@ -658,6 +723,7 @@ export const products = [
     category: "Speakers",
     brand: "Sonos",
     date: "2024-03-01",
+    description: "Compact wireless speaker with surprisingly big sound, 8-hour battery life, IP67 waterproof rating, 360-degree strap design, XBass technology, wireless stereo pairing, portable design, rugged construction"
   },
   {
     id: 67,
@@ -668,6 +734,7 @@ export const products = [
     category: "Speakers",
     brand: "Bose",
     date: "2024-02-10",
+    description: "Premium noise-canceling headphones with world-class quiet, balanced audio performance, 24-hour battery life, comfortable lightweight design, voice assistant access, intuitive controls, premium materials, travel case included"
   },
   {
     id: 68,
@@ -678,6 +745,6 @@ export const products = [
     category: "Speakers",
     brand: "Bose",
     date: "2024-02-12",
+    description: "360-degree portable Bluetooth speaker with deep, loud sound, 16-hour battery life, water-resistant design, built-in handle, voice prompts, wireless range up to 30 feet, seamless aluminum body, premium audio quality"
   }
-  // ... (remaining products follow the same pattern)
 ];
