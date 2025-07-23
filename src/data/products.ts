@@ -2,68 +2,68 @@ export const products = [
   {
     id: 1,
     name: "HP Wireless Mouse",
-    price: 1190,
+    price: 703,
     rating: 4.6,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLJ0mXonHI9y1BHgI5V58PQjuk9bqvBQm60w&s",
+    image: "https://m.media-amazon.com/images/I/616NPYYloKL._AC_UY436_FMwebp_QL65_.jpg",
     category: "Computer and Peripherals",
     brand: "HP",
     date: "2024-04-18",
-    description: "Wireless optical mouse with 2.4GHz connectivity, 1600 DPI precision tracking, ergonomic design for comfortable grip, 3-button configuration with scroll wheel, battery life up to 12 months, plug-and-play USB receiver, compatible with Windows and Mac OS"
+    description: "HP 150 Wireless Mouse,1600 DPI, 10 m Range, 2.4 GHz USB dongle for Instant connectivity, Ambidextrous, Ergonomic Design, Rubber Grip for All Day Comfort, 12 Month Battery, 3 Years Warranty"
   },
   {
     id: 2,
-    name: "LG Wired CPU",
-    price: 1990,
+    name: "Wire Less Keyboard Mouse",
+    price: 1699,
     rating: 4.9,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAmOpJejrL98uJVM8QyRvsyAPfl7Frn1j3oA&s",
-    category: "Projector",
-    brand: "LG",
+    image: "https://m.media-amazon.com/images/I/51B31ZS0DDL._SL1500_.jpg",
+    category: "Computer and Peripherals",
+    brand: "	Logitech",
     date: "2024-07-19",
-    description: "Desktop computer unit with Intel Core processor, 8GB DDR4 RAM, 256GB SSD storage, integrated graphics, multiple USB 3.0 ports, HDMI output, Ethernet connectivity, pre-installed Windows 11, compact tower design, energy efficient operation"
+    description: "Logitech MK220 Compact Wireless Keyboard and Mouse Combo for Windows, 2.4 GHz Wireless with Unifying USB-Receiver, 24 Month Battery, Compatible with PC, Laptop - Black"
   },
   {
     id: 3,
     name: "CROMA Headphones",
     price: 2999,
     rating: 4.8,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCBO7dBebWrLUoKHV3rLHj9s3WLU5rtQ78Pg&s",
+    image: "https://m.media-amazon.com/images/I/71zfpkr4bYL._SL1500_.jpg",
     category: "Cameras",
     brand: "CROMA",
     date: "2024-09-20",
-    description: "Over-ear wireless headphones with active noise cancellation, 40mm dynamic drivers, frequency response 20Hz-20kHz, Bluetooth 5.0 connectivity, 30-hour battery life, quick charge feature, built-in microphone, foldable design with carrying case"
+    description: "Boult Q Over Ear Bluetooth Headphones with 70H Playtime, 40mm Bass Drivers, Zen™ ENC Mic, Type-C Fast Charging, 4 EQ Modes, BTv 5.4, AUX Option, Easy Control, IPX5 headphones wireless with mic (Black)"
   },
   {
     id: 4,
     name: "RealMe Smartwatch",
     price: 4999,
     rating: 4.8,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1gPaMN6bGEGmlqklxev9vmnlJ_IiWkYeaA&s",
-    category: "Smartwatch",
+    image: "https://m.media-amazon.com/images/I/71qq-p26D4L._AC_UY436_FMwebp_QL65_.jpg",
+    category: "tech gadgets",
     brand: "RealMe",
     date: "2024-10-20",
-    description: "1.4-inch AMOLED display with 454x454 resolution, GPS tracking, heart rate monitor, SpO2 sensor, 100+ workout modes, 5ATM water resistance, 12-day battery life, Bluetooth calling, music control, sleep tracking, IP68 rating"
+    description: "Redmi Watch 5 Lite, 1.96 Amoled, Advanced in-Built GPS, 5 ATM, 18 Day Battery, Bluetooth Calling with AI Noise Reduction, Always on Display, Black"
   },
   {
     id: 5,
     name: "Sony Voice cancellation Neckband",
-    price: 1290,
+    price: 1499,
     rating: 4.8,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGQQD7-_aQvssX-zqLS47nLzGcfaz1M4F49Q&s",
+    image: "https://m.media-amazon.com/images/I/41d2o4QXPfL._SL1000_.jpg",
     category: "Tech Gadgets",
     brand: "Sony",
     date: "2024-11-11",
-    description: "Wireless neckband earphones with active noise cancellation, 12mm dynamic drivers, Bluetooth 5.0, 20-hour battery life, quick charge 10 minutes for 60 minutes playback, magnetic earbuds, voice assistant support, IPX4 sweat resistance"
+    description: "Sony WI-C100 Wireless Headphones with Customizable Equalizer for Deep Bass & 25 Hrs Battery, DSEE-Upscale, Splash Proof, 360RA, Fast Pair, in Ear Bluetooth Headset with Mic for Phone Calls (Black)"
   },
   {
     id: 6,
     name: "Samsung Smartwatch",
-    price: 2990,
+    price: 3900,
     rating: 4.7,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0ihVodrG2oaOLp-POhgdJ_ff13xZAT72-XA&s",
-    category: "Smartwatch",
+    image: "https://m.media-amazon.com/images/I/61o3-pf41tL._AC_UY436_FMwebp_QL65_.jpg",
+    category: "Tech Gadgets",
     brand: "Samsung",
     date: "2024-03-26",
-    description: "1.2-inch Super AMOLED display, Tizen OS, GPS + LTE connectivity, heart rate monitoring, sleep tracking, 40mm case size, rotating bezel navigation, 4GB storage, Samsung Pay support, water resistant up to 50m, 4-day battery life"
+    description: "Samsung Galaxy Fit3 Light and Sleek Fitness Band, 13 Days Battery, 100+ Exercises and Sleep Tracking, Dark Gray (Black)"
   },
   {
     id: 7,
@@ -90,7 +90,7 @@ export const products = [
   {
     id: 9,
     name: "LG Mouse",
-    price: 1999,
+    price: 600,
     rating: 4.9,
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJgMCGUt53Lq5EcLpIbh34iVqWEG_5GBVRMg&s",
     category: "Tech Gadgets",
@@ -100,10 +100,10 @@ export const products = [
   },
   {
     id: 10,
-    name: "Redragon Mouse Pad",
-    price: 999,
+    name: "Redgear Mouse Pad",
+    price: 460,
     rating: 4.8,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNi9D5w_zjaMuHSa3QYbGdk8F1m0L6zr_UEA&s",
+    image: "https://m.media-amazon.com/images/I/715w7oOSzBL._AC_UY436_FMwebp_QL65_.jpg",
     category: "Tech Gadgets",
     brand: "Redragon",
     date: "2024-01-18",
@@ -112,40 +112,40 @@ export const products = [
   {
     id: 11,
     name: "HP Wireless Keyboard",
-    price: 2499,
+    price: 1700,
     rating: 4.9,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROjlH7lTSbD-Ky1Jb52xpFQn1DccZOWBWdsQ&s",
+    image: "https://m.media-amazon.com/images/I/51F5ycjUg4L._AC_UY436_FMwebp_QL65_.jpg",
     category: "Tech Gadgets",
     brand: "HP",
     date: "2024-09-22",
-    description: "Full-size wireless keyboard with 2.4GHz connectivity, low-profile keys for comfortable typing, 12 function keys, numeric keypad, spill-resistant design, 36-month battery life, plug-and-play USB receiver, Windows and Mac compatible"
+    description: "HP 230 Wireless Black Keyboard with 2.4GHz connectivity up to 10m, 12 Function Keys and 16-Month Long Battery Life. 3-Years Warranty.(3L1E7AA)"
   },
   {
     id: 12,
-    name: "Sony Keyboard",
+    name: "ZEBRONICS Keyboard",
     price: 3499,
     rating: 4.7,
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAmOpJejrL98uJVM8QyRvsyAPfl7Frn1j3oA&s",
     category: "Tech Gadgets",
-    brand: "Sony",
+    brand: "ZEBRONICS",
     date: "2024-04-29",
-    description: "Mechanical gaming keyboard with RGB backlighting, Cherry MX switches, anti-ghosting technology, programmable macro keys, aluminum frame construction, detachable wrist rest, USB passthrough, dedicated media controls, customizable lighting effects"
+    description: "ZEBRONICS ZEB-KM2100 Multimedia USB Keyboard Comes with 114 Keys Including 12 Dedicated Multimedia Keys & with Rupee Key"
   },
   {
     id: 13,
-    name: "Fossil Smartwatch",
+    name: "Refurbished Fossil Smartwatch",
     price: 3990,
     rating: 4.8,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUl9_runEb1qVk1RLpyC7D_dP9bwXVPSITDw&s",
+    image: "https://m.media-amazon.com/images/I/51xmB2jvtHL._SL1000_.jpg",
     category: "Tech Gadgets",
     brand: "Fossil",
     date: "2024-10-16",
-    description: "Wear OS smartwatch with 1.28-inch AMOLED display, Snapdragon Wear 4100+ processor, GPS tracking, heart rate monitor, NFC payments, Google Assistant, customizable dials, 24-hour battery life, swim-proof design, leather strap"
+    description: "Fossil Gen 6(44Mm, Brown Color) Mens Smartwatch With Amoled Screen, Alexa Built-In, Snapdragon 4100+ Wear Platform, Google Assistant, Spo2, Wellness Features And Smartphone Notifications - Ftw4062"
   },
   {
     id: 14,
     name: "Refurbished VIVO Tab",
-    price: 2990,
+    price: 3990,
     rating: 4.5,
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmumS4UfSADmA3rX87uiEORcj-qY6IGWNXQQ&s",
     category: "Tech Gadgets",
@@ -156,7 +156,7 @@ export const products = [
   {
     id: 15,
     name: "USB 2.0 Extension Cable",
-    price: 800,
+    price: 398,
     rating: 4.6,
     image: "https://dispatchotechnology.co.in/admin/image/700x700%20(5).jpeg",
     category: "Tech Gadgets",
@@ -166,8 +166,8 @@ export const products = [
   },
   {
     id: 16,
-    name: "Wacom Intuos Bluetooth Graphics Pen Tablet",
-    price: 1100,
+    name: "Refurbished,  Wacom Intuos Bluetooth Graphics Pen Tablet",
+    price: 2700,
     rating: 4.7,
     image: "https://dispatchotechnology.co.in/admin/image/51DtVqQ8VKL._SX679_.jpg",
     category: "Tech Gadgets",
@@ -178,7 +178,7 @@ export const products = [
   {
     id: 17,
     name: "Refurbished -Apple Pencil",
-    price: 990,
+    price: 3799,
     rating: 4.4,
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYNtAXg3qpq_91Gyjpg6eEBfjaENCbu7xMFA&s",
     category: "Tech Gadgets",
@@ -188,10 +188,10 @@ export const products = [
   },
   {
     id: 18,
-    name: "Refurbished - Dual Sense Wireless Playstation",
+    name: "Refurbished -Sony Dual Sense Wireless Playstation",
     price: 1590,
     rating: 4.6,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqD4z63wrtxejniVM61tdN-6LRyhegDJTFNA&s",
+    image: "https://m.media-amazon.com/images/I/61Oij54SgkL._SL1500_.jpg",
     category: "Tech Gadgets",
     brand: "Samsung",
     date: "2024-03-12",
